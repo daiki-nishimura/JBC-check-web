@@ -8,20 +8,11 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint"
-    ]
-  },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vuetify": "^2.4.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -42,8 +33,20 @@
     "lint-staged": "^10.5.3",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.1.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint"
+    ]
   }
 }
-
