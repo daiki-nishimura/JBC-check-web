@@ -4,11 +4,14 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/recommended',
     '@vue/airbnb',
   ],
+  parser: "vue-eslint-parser",
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: "babel-eslint",
+    ecmaVersion: 2020,
+    sourceType: "module"
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
