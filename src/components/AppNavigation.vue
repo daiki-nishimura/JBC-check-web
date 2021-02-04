@@ -4,11 +4,10 @@
     <div class="title">
       <span class="titleName">JBC-check</span>
     </div>
-    <div class="searchBar">
-      <!-- v-modelの値はdataと同じ値にする -->
+    <div>
       <v-text-field
-        v-model="residentSearch"
-        class="search"
+        v-model="keyword"
+        class="search-box"
         solo
         dense
         placeholder="利用者の検索"
@@ -24,18 +23,14 @@ export default {
   name: 'AppNavigation',
   data() {
     return {
-      // この名前をいい感じにする
-      residentSearch: '',
+      keyword: '',
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.searchBar {
-  padding-left: 47px;
-}
-.search {
+.search-box {
   width: 640px;
 }
 .title {
