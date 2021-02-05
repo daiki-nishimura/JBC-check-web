@@ -1,14 +1,12 @@
 <template>
   <v-app-bar app color="#3DA9FC">
-    <!-- クラスの名前をいい感じにしてください -->
-    <div class="title">
-      <span class="titleName">JBC-check</span>
+    <div class="px-12">
+      <span class="title white--text" :class="`text-h5`">JBC-check</span>
     </div>
-    <div class="searchBar">
-      <!-- v-modelの値はdataと同じ値にする -->
+    <div>
       <v-text-field
-        v-model="residentSearch"
-        class="search"
+        v-model="keyword"
+        class="search-text-field"
         solo
         dense
         placeholder="利用者の検索"
@@ -24,28 +22,18 @@ export default {
   name: 'AppNavigation',
   data() {
     return {
-      // この名前をいい感じにする
-      residentSearch: '',
+      keyword: '',
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.searchBar {
-  padding-left: 47px;
-}
-.search {
+.search-text-field {
   width: 640px;
 }
-.title {
-  padding-left: 45px;
-  padding-right: 47x;
 
-  .titleName {
-    font-size: 24px;
-    color: #ffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+.title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 </style>
