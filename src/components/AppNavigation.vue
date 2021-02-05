@@ -5,8 +5,8 @@
     </div>
     <div>
       <v-text-field
-        v-model="keyWord"
-        class="searchBox"
+        v-model="keyword"
+        class="search-text-field"
         solo
         dense
         placeholder="利用者の検索"
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.searchBox {
+.search-text-field {
   width: 640px;
 }
 
