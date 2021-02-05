@@ -22,7 +22,7 @@ export default {
   name: 'AppNavigation',
   data() {
     return {
-      keyWord: '',
+      keyword: '',
     };
   },
 };
