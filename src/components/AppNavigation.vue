@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="#3DA9FC">
-    <div>
-      <span class="title white--text headline px-12">JBC-check</span>
+    <div class="px-12">
+      <span class="title white--text" :class="`text-h5`">JBC-check</span>
     </div>
     <div>
       <v-text-field
