@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="#3DA9FC">
+  <v-app-bar app clipped-left color="blue lighten-1">
     <div class="px-12">
       <span class="title white--text" :class="`text-h5`">JBC-check</span>
     </div>
