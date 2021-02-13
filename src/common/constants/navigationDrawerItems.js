@@ -10,5 +10,4 @@ export default {
     { title: '入浴予定', icon: 'mdi-folder-account' },
     { title: 'アクシデント', icon: 'mdi-flag' },
   ],
-  SHOW_CHEVRON_ICON: '利用者',
 };
