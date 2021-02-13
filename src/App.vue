@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <AppNavigation />
-    <NavigationDrawer />
+    <AppNavigationDrawer />
 
     <v-main>
       <HelloWorld />
@@ -12,7 +12,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import AppNavigation from './components/AppNavigation.vue';
-import NavigationDrawer from './components/NavigationDrawer.vue';
+import AppNavigationDrawer from './components/AppNavigationDrawer.vue';
 
 export default {
   name: 'App',
@@ -20,7 +20,7 @@ export default {
   components: {
     HelloWorld,
     AppNavigation,
-    NavigationDrawer,
+    AppNavigationDrawer,
   },
 };
 </script>
