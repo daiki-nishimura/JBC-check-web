@@ -37,9 +37,6 @@ export default {
   },
 
   methods: {
-    showChevronIcon(item) {
-      return item.title === NAVIGATION_DRAWER.SHOW_CHEVRON_ICON;
-    },
     isMini() {
       this.mini = !this.mini;
     },
