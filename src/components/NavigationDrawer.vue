@@ -40,7 +40,7 @@ export default {
     showChevronIcon(item) {
       return item.title === NAVIGATION_DRAWER.SHOW_CHEVRON_ICON;
     },
-    closeListTitle() {
+    isMini() {
       this.mini = !this.mini;
     },
   },
