@@ -22,8 +22,5 @@ export default {
     AppNavigation,
     NavigationDrawer,
   },
-  data: () => ({
-    //
-  }),
 };
 </script>
