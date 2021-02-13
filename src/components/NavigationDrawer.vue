@@ -16,7 +16,7 @@
           <v-list-item-title class="white--text" v-text="item.title" />
         </v-list-item-content>
 
-        <v-btn v-if="!index" icon @click.stop="closeListTitle">
+        <v-btn v-if="!index" icon @click.stop="isMini">
           <v-icon color="white">mdi-chevron-left</v-icon>
         </v-btn>
       </v-list-item>
