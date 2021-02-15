@@ -16,7 +16,7 @@
           <v-list-item-title class="white--text" v-text="item.title" />
         </v-list-item-content>
 
-        <v-btn v-if="!index" icon @click.stop="isMini">
+        <v-btn v-if="!index" icon @click.stop="expandNavigationDrawer">
           <v-icon color="white">mdi-chevron-left</v-icon>
         </v-btn>
       </v-list-item>
@@ -31,13 +31,23 @@ export default {
   name: 'AppNavigationDrawer',
   data() {
     return {
+      /**
+       * ナビゲーションドロワーのタイトルリスト
+       */
       items: NAVIGATION_DRAWER.ITEMS,
+
+      /**
+       * ナビゲーションドロワーが縮小しているか
+       */
       mini: false,
     };
   },
 
   methods: {
-    isMini() {
+    /**
+     * ナビゲーションドロワーを展開/縮小する
+     */
+    expandNavigationDrawer() {
       this.mini = !this.mini;
     },
   },
