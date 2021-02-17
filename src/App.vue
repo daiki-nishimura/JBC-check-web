@@ -4,21 +4,19 @@
     <AppNavigationDrawer />
 
     <v-main>
-      <HelloWorld />
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import AppNavigation from './components/AppNavigation.vue';
-import AppNavigationDrawer from './components/AppNavigationDrawer.vue';
+import AppNavigation from '@/components/AppNavigation.vue';
+import AppNavigationDrawer from '@/components/AppNavigationDrawer.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
     AppNavigation,
     AppNavigationDrawer,
   },
