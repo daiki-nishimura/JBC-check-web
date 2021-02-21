@@ -1,7 +1,5 @@
 <template>
-  <v-app>
-    <ContentMenu />
-  </v-app>
+  <ContentMenu />
 </template>
 
 <script>
