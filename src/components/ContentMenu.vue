@@ -1,54 +1,56 @@
 <template>
-  <v-toolbar flat color="blue-grey lighten-4">
-    <v-row>
-      <v-col>
-        <v-layout align-center>
-          <v-icon x-large>mdi-plus-circle</v-icon>
-          <v-spacer />
-          <v-menu v-model="menu" offset-y :close-on-content-click="false">
-            <template #activator="{ on }">
-              <v-btn v-model="menu" icon elevation="0" v-on="on" @click="menu">
-                <v-icon x-large>mdi-calendar-blank</v-icon>
-              </v-btn>
-            </template>
-            <v-date-picker
-              v-model="picker"
-              :day-format="(date) => new Date(date).getDay()"
-              locale="jp-ja"
-              @click="menu = false"
-            />
-          </v-menu>
-          <span class="text-h5">{{ value }}</span>
-        </v-layout>
-      </v-col>
-    </v-row>
-  </v-toolbar>
+  <v-card tile elevation="0">
+    <v-toolbar flat color="blue-grey lighten-4">
+      <v-btn icon>
+        <v-icon x-large>mdi-plus-circle</v-icon>
+      </v-btn>
+
+      <v-spacer />
+
+      <v-menu offset-y>
+        <template #activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon x-large>mdi-calendar-blank</v-icon>
+          </v-btn>
+        </template>
+        <v-date-picker
+          v-model="hoge"
+          :day-format="(date) => new Date(date).getDate()"
+          no-title
+          locale="ja"
+        />
+      </v-menu>
+
+      <span class="text-h5">{{ formatDate }}</span>
+    </v-toolbar>
+  </v-card>
 </template>
 
 <script>
-export default {
-  name: `DatePicker`,
+// datejsの名前
+import datejs from '@/util/date';
 
-  /* カレンダーの取得 */
-  props: {
-    value: {
-      type: String,
-      default: new Date().toISOString().substr(0, 10),
-    },
-  },
+export default {
+  name: 'ContentMenu',
+
   data() {
     return {
-      menu: false,
+      //
+      date: undefined,
+      // formatDateの名前
+      formatDate: datejs.getNow(),
     };
   },
-  /* カレンダーの選択した日にちをvalueに返す */
   computed: {
-    picker: {
+    // hogeの名前
+    hoge: {
       get() {
-        return this.value;
+        return this.date;
       },
-      set() {
-        this.menu = false;
+      set(value) {
+        this.date = value;
+        // convertFormat
+        this.formatDate = datejs.convertFormat(value, 'YYYY/MM/DD (ddd)');
       },
     },
   },
