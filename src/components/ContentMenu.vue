@@ -35,7 +35,7 @@ export default {
 
   data() {
     return {
-      //
+      // 2020-09-13
       date: undefined,
       // formatDateの名前
       formatDate: datejs.getNow(),
