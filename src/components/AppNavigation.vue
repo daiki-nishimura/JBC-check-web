@@ -1,11 +1,12 @@
 <template>
-  <v-app-bar app clipped-left color="blue lighten-1">
+  <v-app-bar elevation="0" app clipped-left color="blue lighten-1">
     <div class="px-12">
       <span class="title white--text" :class="`text-h5`">JBC-check</span>
     </div>
     <div>
       <v-text-field
         v-model="keyword"
+        flat
         class="search-text-field"
         solo
         dense
