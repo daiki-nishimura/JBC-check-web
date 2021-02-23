@@ -9,11 +9,10 @@ dayjs.locale('ja');
  * @param {string} format 形式
  * @return {string} formatの形式で戻る
  */
-const convertFormat = (value, format) => dayjs(value).format(format);
+export function convertDateFormat(value, format) {
+  return dayjs(value).format(format);
+}
 
-const getNow = () => dayjs().format('YYYY/MM/DD (ddd)');
-
-export default {
-  convertFormat,
-  getNow,
-};
+export function getCurrentDate(format = 'YYYY/MM/DD') {
+  return dayjs().format(format);
+}
