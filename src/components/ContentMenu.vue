@@ -14,43 +14,39 @@
           </v-btn>
         </template>
         <v-date-picker
-          v-model="hoge"
+          v-model="picker"
           :day-format="(date) => new Date(date).getDate()"
           no-title
           locale="ja"
         />
       </v-menu>
 
-      <span class="text-h5">{{ formatDate }}</span>
+      <span class="text-h5">{{ formatShowDate }}</span>
     </v-toolbar>
   </v-card>
 </template>
 
 <script>
-// datejsの名前
-import datejs from '@/util/date';
+import { convertDateFormat, getCurrentDate } from '@/utils/date';
 
 export default {
   name: 'ContentMenu',
 
   data() {
     return {
-      // 2020-09-13
       date: undefined,
-      // formatDateの名前
-      formatDate: datejs.getNow(),
+      formatShowDate: getCurrentDate('YYYY/MM/DD (ddd)'),
     };
   },
+
   computed: {
-    // hogeの名前
-    hoge: {
+    picker: {
       get() {
         return this.date;
       },
       set(value) {
         this.date = value;
-        // convertFormat
-        this.formatDate = datejs.convertFormat(value, 'YYYY/MM/DD (ddd)');
+        this.formatShowDate = convertDateFormat(value, 'YYYY/MM/DD (ddd)');
       },
     },
   },
