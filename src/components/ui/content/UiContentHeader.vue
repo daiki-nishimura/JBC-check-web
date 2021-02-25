@@ -9,8 +9,5 @@
 <script>
 export default {
   name: 'UiContentHeader',
-  data() {
-    return {};
-  },
 };
 </script>
