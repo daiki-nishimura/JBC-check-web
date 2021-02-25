@@ -14,8 +14,8 @@ export function convertDateFormat(value, format) {
 }
 /**
  * 現在の日付を取得する
- * @param {string} format 形式
  * デフォルトの形式はYYYY/MM/DD
+ * @param {string} format 形式
  * @return {string} fomatの形式で返す
  */
 export function getCurrentDate(format = 'YYYY/MM/DD') {
