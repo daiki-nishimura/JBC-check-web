@@ -1,15 +1,15 @@
 <template>
-  <ResidentContentMenu />
+  <ResidentContentHeader />
 </template>
 
 <script>
-import ResidentContentMenu from '@/components/ResidentContentMenu.vue';
+import ResidentContentHeader from '@/components/resident/ResidentContentHeader.vue';
 
 export default {
   name: 'ResidentList',
 
   components: {
-    ResidentContentMenu,
+    ResidentContentHeader,
   },
 };
 </script>
