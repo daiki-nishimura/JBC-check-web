@@ -7,19 +7,19 @@
 
       <v-spacer />
 
-      <ContentHeaderDate />
+      <UiContentHeaderDate />
     </v-toolbar>
   </v-card>
 </template>
 
 <script>
-import ContentHeaderDate from '@/components/ui/content/ContentHeaderDate.vue';
+import UiContentHeaderDate from '@/components/ui/content/UiContentHeaderDate.vue';
 
 export default {
   name: 'ResidentContentHeader',
 
   components: {
-    ContentHeaderDate,
+    UiContentHeaderDate,
   },
 };
 </script>
