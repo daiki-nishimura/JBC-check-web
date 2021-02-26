@@ -1,11 +1,5 @@
 <template>
-  <v-navigation-drawer
-    width="228px"
-    color="blue-grey darken-2"
-    app
-    :mini-variant.sync="mini"
-    clipped
-  >
+  <v-navigation-drawer width="228" color="blue-grey darken-2" app :mini-variant.sync="mini" clipped>
     <v-list>
       <v-list-item v-for="(item, index) in items" :key="item.title" link>
         <v-list-item-icon>
