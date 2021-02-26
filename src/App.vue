@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import AppNavigation from '@/components/AppNavigation.vue';
-import AppNavigationDrawer from '@/components/AppNavigationDrawer.vue';
+import AppNavigation from '@/components/common/AppNavigation.vue';
+import AppNavigationDrawer from '@/components/common/AppNavigationDrawer.vue';
 
 export default {
   name: 'App',
