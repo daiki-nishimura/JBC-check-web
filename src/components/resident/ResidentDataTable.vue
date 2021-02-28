@@ -7,6 +7,9 @@
       show-select
       class="elevation-1 data-table"
       height="768"
+      :footer-props="{
+        'items-per-page-text': '表示数',
+      }"
     >
     </v-data-table>
   </v-container>
