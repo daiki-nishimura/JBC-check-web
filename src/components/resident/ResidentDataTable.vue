@@ -3,7 +3,7 @@
     <v-data-table
       :headers="headers"
       :items="items"
-      item-key="name"
+      item-key="id"
       show-select
       class="elevation-1 data-table"
       height="768"
