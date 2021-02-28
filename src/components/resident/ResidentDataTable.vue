@@ -6,7 +6,6 @@
       item-key="name"
       show-select
       class="elevation-1 data-table"
-      style="width: 100%"
       height="768"
     >
       <!-- <template v-slot:items="props">
