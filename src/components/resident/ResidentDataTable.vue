@@ -22,7 +22,6 @@ export default {
         {
           text: '利用者名',
           align: 'start',
-          sortable: false,
           value: 'name',
         },
 
