@@ -38,6 +38,7 @@ export default {
       ],
       items: [
         {
+          id: 1,
           name: '西村だいき',
           birthday: '',
           sex: '',
@@ -50,6 +51,7 @@ export default {
           remarks: 'こんにちは',
         },
         {
+          id: 2,
           name: '',
           birthday: '',
           sex: '',
@@ -62,6 +64,7 @@ export default {
           remarks: '',
         },
         {
+          id: 3,
           name: '',
           birthday: '',
           sex: '',
@@ -74,6 +77,7 @@ export default {
           remarks: '',
         },
         {
+          id: 4,
           name: '',
           birthday: '',
           sex: '',
@@ -86,6 +90,7 @@ export default {
           remarks: '',
         },
         {
+          id: 5,
           name: '',
           birthday: '',
           sex: '',
@@ -98,6 +103,7 @@ export default {
           remarks: '',
         },
         {
+          id: 6,
           name: '',
           birthday: '',
           sex: '',
@@ -110,6 +116,7 @@ export default {
           remarks: '',
         },
         {
+          id: 7,
           name: '',
           birthday: '',
           sex: '',
@@ -122,6 +129,7 @@ export default {
           remarks: '',
         },
         {
+          id: 8,
           name: '',
           birthday: '',
           sex: '',
@@ -134,6 +142,7 @@ export default {
           remarks: '',
         },
         {
+          id: 9,
           name: '',
           birthday: '',
           sex: '',
@@ -146,6 +155,7 @@ export default {
           remarks: '',
         },
         {
+          id: 10,
           name: '',
           birthday: '',
           sex: '',
