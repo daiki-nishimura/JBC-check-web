@@ -26,7 +26,7 @@ export default {
           value: 'name',
         },
 
-        { text: '生年月日', value: '生年月日', width: '' },
+        { text: '生年月日', value: '生年月日' },
         { text: '性別', value: '性別' },
         { text: '身長', value: '身長' },
         { text: '体重', value: '体重' },
