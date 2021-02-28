@@ -8,9 +8,6 @@
       class="elevation-1 data-table"
       height="768"
     >
-      <!-- <template v-slot:items="props">
-          <td>{{ props.item.ApplicationType }}</td>
-        </template> -->
     </v-data-table>
   </v-container>
 </template>
