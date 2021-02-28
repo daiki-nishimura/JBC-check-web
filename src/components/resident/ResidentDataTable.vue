@@ -185,13 +185,13 @@ export default {
         }
       }
     }
-  }
-}
-tbody {
-  tr {
-    height: 68px;
-    td {
-      font-size: 18px !important;
+    tbody {
+      tr {
+        height: 68px;
+        td {
+          font-size: 18px !important;
+        }
+      }
     }
   }
 }
