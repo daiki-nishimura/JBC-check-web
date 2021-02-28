@@ -2,7 +2,7 @@
   <v-container>
     <v-data-table
       :headers="headers"
-      :items="利用者名"
+      :items="items"
       item-key="name"
       show-select
       class="elevation-1 data-table"
@@ -36,7 +36,7 @@ export default {
         { text: '生活歴', value: '生活歴' },
         { text: '備考', value: '備考' },
       ],
-      利用者名: [
+      items: [
         {
           name: '西村だいき',
           生年月日: '',
