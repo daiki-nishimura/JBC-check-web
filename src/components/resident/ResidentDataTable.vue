@@ -184,6 +184,7 @@ export default {
         th {
           font-size: 18px !important;
           background: #42a5f5;
+          white-space: nowrap;
         }
       }
     }
@@ -192,6 +193,8 @@ export default {
         height: 68px;
         td {
           font-size: 18px !important;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
     }
