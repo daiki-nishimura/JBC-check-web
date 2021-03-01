@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import ContentHeaderDate from '@/components/ui/content/ContentHeaderDate.vue';
-import ContentHeader from '@/components/ui/content/ContentHeader.vue';
+import ContentHeaderDate from '@/components/common/ContentHeaderDate.vue';
+import ContentHeader from '@/components/common/ContentHeader.vue';
 
 export default {
   name: 'ResidentContentHeader',
