@@ -23,8 +23,14 @@ export default {
   selected: [],
   data() {
     return {
+      /**
+       * v-data-tableのヘッダーリスト
+       */
       headers: HEADERS.RESIDENT,
 
+      /**
+       * v-data-tableのアイテムリスト
+       */
       items: [
         {
           id: 1,
