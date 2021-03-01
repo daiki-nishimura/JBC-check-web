@@ -2,21 +2,21 @@
   <div>
     <ResidentContentHeader />
 
-    <UiContentDataTable :headers="headers" :items="items" />
+    <ContentDataTable :headers="headers" :items="items" />
   </div>
 </template>
 
 <script>
 import HEADERS from '@/common/constants/contentDataTableHeadars';
 import ResidentContentHeader from '@/components/resident/ResidentContentHeader.vue';
-import UiContentDataTable from '@/components/ui/content/UiContentDataTable.vue';
+import ContentDataTable from '@/components/ui/content/ContentDataTable.vue';
 
 export default {
   name: 'ResidentList',
 
   components: {
     ResidentContentHeader,
-    UiContentDataTable,
+    ContentDataTable,
   },
 
   data() {
