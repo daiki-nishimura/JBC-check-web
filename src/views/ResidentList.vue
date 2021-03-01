@@ -22,12 +22,12 @@ export default {
   data() {
     return {
       /**
-       * v-data-tableのヘッダーリスト
+       * データテーブルのヘッダーリスト
        */
       headers: HEADERS.RESIDENT,
 
       /**
-       * v-data-tableのアイテムリスト
+       * データテーブルのアイテムリスト
        */
       items: [
         {
