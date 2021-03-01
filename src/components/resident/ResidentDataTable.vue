@@ -186,8 +186,10 @@ export default {
         height: 68px;
         td {
           font-size: 18px !important;
+          overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          max-width: 120px;
         }
       }
     }
