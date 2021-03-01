@@ -2,7 +2,7 @@ export default {
   headers: [
     { text: '利用者名', value: 'name' },
     { text: '生年月日', value: 'birthday' },
-    { text: '性別', value: 'sex' },
+    { text: '性別', value: 'gender' },
     { text: '身長', value: 'height' },
     { text: '体重', value: 'weight' },
     { text: 'アレルギー', value: 'allergies' },
