@@ -19,5 +19,44 @@
 <script>
 export default {
   name: 'UiContentDataTable',
+  props: {
+    headers: {
+      type: Array,
+      required: true,
+    },
+    items: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
+
+<style lang="scss">
+.data-table {
+  &.v-data-table {
+    thead {
+      tr {
+        height: 88px;
+        th {
+          font-size: 18px !important;
+          background: #42a5f5;
+          white-space: nowrap;
+        }
+      }
+    }
+    tbody {
+      tr {
+        height: 68px;
+        td {
+          font-size: 16px !important;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 120px;
+        }
+      }
+    }
+  }
+}
+</style>
