@@ -24,7 +24,6 @@ export default {
       headers: [
         {
           text: '利用者名',
-          align: 'start',
           value: 'name',
         },
 
