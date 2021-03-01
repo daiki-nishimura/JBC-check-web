@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'UiContentHeader',
+  name: 'ContentHeader',
 };
 </script>
