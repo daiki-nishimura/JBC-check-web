@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import residentDataTableheadars from '@/common/constants/residentDataTableheadars';
+import HEADERS from '@/common/constants/contentDataTableHeadars';
 import residentDataTableitems from '@/common/constants/residentDataTableitems';
 
 export default {
@@ -24,7 +24,7 @@ export default {
   selected: [],
   data() {
     return {
-      headers: residentDataTableheadars.headers,
+      headers: HEADERS.RESIDENT,
       items: residentDataTableitems.items,
     };
   },
