@@ -1,25 +1,25 @@
 <template>
-  <UiContentHeader>
+  <ContentHeader>
     <v-btn icon>
       <v-icon x-large>mdi-plus-circle</v-icon>
     </v-btn>
 
     <v-spacer />
 
-    <UiContentHeaderDate />
-  </UiContentHeader>
+    <ContentHeaderDate />
+  </ContentHeader>
 </template>
 
 <script>
-import UiContentHeaderDate from '@/components/ui/content/UiContentHeaderDate.vue';
-import UiContentHeader from '@/components/ui/content/UiContentHeader.vue';
+import ContentHeaderDate from '@/components/ui/content/ContentHeaderDate.vue';
+import ContentHeader from '@/components/ui/content/ContentHeader.vue';
 
 export default {
   name: 'ResidentContentHeader',
 
   components: {
-    UiContentHeaderDate,
-    UiContentHeader,
+    ContentHeaderDate,
+    ContentHeader,
   },
 };
 </script>
