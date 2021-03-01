@@ -9,7 +9,7 @@
 <script>
 import HEADERS from '@/common/constants/contentDataTableHeadars';
 import ResidentContentHeader from '@/components/resident/ResidentContentHeader.vue';
-import ContentDataTable from '@/components/ui/content/ContentDataTable.vue';
+import ContentDataTable from '@/components/common/ContentDataTable.vue';
 
 export default {
   name: 'ResidentList',
