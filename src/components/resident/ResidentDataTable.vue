@@ -1,26 +1,22 @@
 <template>
-  <v-container>
-    <v-data-table
-      :headers="headers"
-      :items="items"
-      item-key="id"
-      show-select
-      class="elevation-1 data-table"
-      height="768"
-      :footer-props="{
-        'items-per-page-text': '表示数',
-      }"
-    >
-    </v-data-table>
-  </v-container>
+  <div>
+    <UiContentDataTable />
+  </div>
 </template>
 
 <script>
 import HEADERS from '@/common/constants/contentDataTableHeadars';
+import UiContentDataTable from '@/components/ui/content/UiContentDataTable.vue';
 
 export default {
   name: 'ResidentDataTable',
+
+  components: {
+    UiContentDataTable,
+  },
+
   selected: [],
+
   data() {
     return {
       /**
@@ -185,7 +181,7 @@ export default {
       tr {
         height: 68px;
         td {
-          font-size: 18px !important;
+          font-size: 16px !important;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
