@@ -10,7 +10,7 @@ import { convertDateFormat, getCurrentDate } from '@/utils/date';
 import UiDatePicker from '@/components/ui/date-picker/UiDatePicker.vue';
 
 export default {
-  name: 'UiContentHeaderDate',
+  name: 'ContentHeaderDate',
 
   components: {
     UiDatePicker,
