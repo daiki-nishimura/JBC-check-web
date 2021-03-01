@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'UiContentDataTable',
+  name: 'ContentDataTable',
   props: {
     headers: {
       type: Array,
