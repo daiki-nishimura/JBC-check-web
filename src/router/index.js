@@ -12,7 +12,6 @@ const routes = [
   },
   {
     path: '/resident-register',
-    alias: '/resident_register',
     name: 'ResidentRegister',
     component: () => import('@/views/ResidentRegister.vue'),
   },
