@@ -10,6 +10,12 @@ const routes = [
     name: 'ResidentList',
     component: () => import('@/views/ResidentList.vue'),
   },
+  {
+    path: '/resident-resitration',
+    alias: '/resident_resitration',
+    name: 'ResidentResitration',
+    component: () => import('@/views/ResidentResitration.vue'),
+  },
 ];
 
 const router = new VueRouter({
