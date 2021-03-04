@@ -5,13 +5,13 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/resident-list',
+    path: '/resident/list',
     alias: '/',
     name: 'ResidentList',
     component: () => import('@/views/ResidentList.vue'),
   },
   {
-    path: '/resident-register',
+    path: '/resident/register',
     name: 'ResidentRegister',
     component: () => import('@/views/ResidentRegister.vue'),
   },
