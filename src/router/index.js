@@ -11,10 +11,10 @@ const routes = [
     component: () => import('@/views/ResidentList.vue'),
   },
   {
-    path: '/resident-resitration',
-    alias: '/resident_resitration',
-    name: 'ResidentResitration',
-    component: () => import('@/views/ResidentResitration.vue'),
+    path: '/resident-register',
+    alias: '/resident_register',
+    name: 'ResidentRegister',
+    component: () => import('@/views/ResidentRegister.vue'),
   },
 ];
 
