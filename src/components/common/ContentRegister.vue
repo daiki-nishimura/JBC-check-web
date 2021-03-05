@@ -7,10 +7,9 @@
 
         <v-card-actions class="justify-center">
           <div class="ma-3" style="position: absolute; bottom: 0">
-            <!-- キャンセルボタンを押した時ページ遷移で利用者一覧に戻るようにするべきなんでしょうか？ -->
-            <v-btn color="error" class="mr-4"> キャンセル </v-btn>
+            <v-btn color="error" class="mr-4"> </v-btn>
 
-            <v-btn class="white--text" color="blue lighten-1"> 送信 </v-btn>
+            <v-btn class="white--text" color="blue lighten-1"> </v-btn>
           </div>
         </v-card-actions>
       </v-card-text>
