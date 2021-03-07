@@ -1,11 +1,10 @@
 <template>
-  <ContentRegister>
-    <!-- 一括でテキストフィールドのheigthを均等に広げようと模索中です  -->
+  <ContentOption>
     <v-text-field label="利用者名" required></v-text-field>
 
     <v-text-field v-model="name" label="生年月日" required></v-text-field>
 
-    <v-select v-model="select" :items="items" label="性別" required></v-select>
+    <v-select v-model="select" :items="genderItems" label="性別" required></v-select>
 
     <v-text-field v-model="name" label="身長" required></v-text-field>
 
@@ -20,17 +19,17 @@
     <v-text-field v-model="name" label="生活歴" required></v-text-field>
 
     <v-text-field v-model="name" label="備考" required></v-text-field>
-  </ContentRegister>
+  </ContentOption>
 </template>
 
 <script>
-import ContentRegister from '@/components/common/ContentRegister.vue';
+import ContentOption from '@/components/common/ContentOption.vue';
 
 export default {
   name: `ResidentRegisterView`,
 
   components: {
-    ContentRegister,
+    ContentOption,
   },
 
   data: () => ({
