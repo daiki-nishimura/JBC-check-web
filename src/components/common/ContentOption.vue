@@ -4,8 +4,6 @@
     <v-card height="880">
       <v-card-text>
         <slot />
-
-        <v-card-actions class="justify-center"> </v-card-actions>
       </v-card-text>
     </v-card>
   </v-container>
