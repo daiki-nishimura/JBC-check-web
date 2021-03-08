@@ -21,29 +21,27 @@
     <v-text-field v-model="name" label="備考" required></v-text-field>
 
     <v-row class="mt-14" justify="center">
-      <ui-cancel-btn></ui-cancel-btn>
-
-      <ui-register-btn></ui-register-btn>
+      <ResidentRegisterAction />
     </v-row>
   </ContentOption>
 </template>
 
 <script>
 import ContentOption from '@/components/common/ContentOption.vue';
-import UiCancelBtn from '@/components/ui/button/UiCancelBtn.vue';
-import UiRegisterBtn from '@/components/ui/button/UiRegisterBtn.vue';
+import ResidentRegisterAction from '@/components/resident/ResidentRegisterAction.vue';
 
 export default {
   name: `ResidentRegisterView`,
 
   components: {
     ContentOption,
-    UiCancelBtn,
-    UiRegisterBtn,
+    ResidentRegisterAction,
   },
 
-  data: () => ({
-    genderItems: ['男', '女'],
-  }),
+  data() {
+    return {
+      genderItems: ['男', '女'],
+    };
+  },
 };
 </script>
