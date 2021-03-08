@@ -19,17 +19,25 @@
     <v-text-field v-model="name" label="生活歴" required></v-text-field>
 
     <v-text-field v-model="name" label="備考" required></v-text-field>
+
+    <ui-cancel-btn></ui-cancel-btn>
+
+    <ui-register-btn></ui-register-btn>
   </ContentOption>
 </template>
 
 <script>
 import ContentOption from '@/components/common/ContentOption.vue';
+import UiCancelBtn from '@/components/ui/button/UiCancelBtn.vue';
+import UiRegisterBtn from '@/components/ui/button/UiRegisterBtn.vue';
 
 export default {
   name: `ResidentRegisterView`,
 
   components: {
     ContentOption,
+    UiCancelBtn,
+    UiRegisterBtn,
   },
 
   data: () => ({
