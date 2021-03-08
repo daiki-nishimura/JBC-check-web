@@ -20,9 +20,11 @@
 
     <v-text-field v-model="name" label="備考" required></v-text-field>
 
-    <ui-cancel-btn></ui-cancel-btn>
+    <v-row class="mt-14" justify="center">
+      <ui-cancel-btn></ui-cancel-btn>
 
-    <ui-register-btn></ui-register-btn>
+      <ui-register-btn></ui-register-btn>
+    </v-row>
   </ContentOption>
 </template>
 
@@ -41,7 +43,7 @@ export default {
   },
 
   data: () => ({
-    items: ['男', '女'],
+    genderItems: ['男', '女'],
   }),
 };
 </script>
