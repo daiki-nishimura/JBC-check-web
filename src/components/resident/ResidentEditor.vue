@@ -31,7 +31,7 @@ import ContentOption from '@/components/common/ContentOption.vue';
 import ResidentRegisterAction from '@/components/resident/ResidentRegisterAction.vue';
 
 export default {
-  name: `ResidentRegisterView`,
+  name: `ResidentEditor`,
 
   components: {
     ContentOption,
