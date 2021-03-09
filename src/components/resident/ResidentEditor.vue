@@ -1,24 +1,24 @@
 <template>
   <ContentOption>
-    <v-text-field label="利用者名" required></v-text-field>
+    <v-text-field label="利用者名"></v-text-field>
 
-    <v-text-field v-model="name" label="生年月日" required></v-text-field>
+    <v-text-field v-model="name" label="生年月日"></v-text-field>
 
-    <v-select v-model="select" :items="genderItems" label="性別" required></v-select>
+    <v-select v-model="select" :items="genderItems" label="性別"></v-select>
 
-    <v-text-field v-model="name" label="身長" required></v-text-field>
+    <v-text-field v-model="name" label="身長"></v-text-field>
 
-    <v-text-field v-model="name" label="体重" required></v-text-field>
+    <v-text-field v-model="name" label="体重"></v-text-field>
 
-    <v-text-field v-model="name" label="アレルギー" required></v-text-field>
+    <v-text-field v-model="name" label="アレルギー"></v-text-field>
 
-    <v-text-field v-model="name" label="病歴" required></v-text-field>
+    <v-text-field v-model="name" label="病歴"></v-text-field>
 
-    <v-text-field v-model="name" label="趣味嗜好" required></v-text-field>
+    <v-text-field v-model="name" label="趣味嗜好"></v-text-field>
 
-    <v-text-field v-model="name" label="生活歴" required></v-text-field>
+    <v-text-field v-model="name" label="生活歴"></v-text-field>
 
-    <v-text-field v-model="name" label="備考" required></v-text-field>
+    <v-text-field v-model="name" label="備考"></v-text-field>
 
     <v-row class="mt-14" justify="center">
       <ResidentRegisterAction />
