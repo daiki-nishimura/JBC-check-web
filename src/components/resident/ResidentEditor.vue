@@ -1,10 +1,10 @@
 <template>
   <ContentOption>
-    <v-text-field label="利用者名"></v-text-field>
+    <v-text-field v-model="name" label="利用者名"></v-text-field>
 
     <v-text-field v-model="name" label="生年月日"></v-text-field>
 
-    <v-select v-model="select" :items="genderItems" label="性別"></v-select>
+    <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
 
     <v-text-field v-model="name" label="身長"></v-text-field>
 
@@ -44,7 +44,20 @@ export default {
        * セレクトリストの選択肢
        */
       genderItems: ['男', '女'],
+      name: '',
+      gender: '',
     };
+  },
+  computed: {
+    value: {
+      get() {
+        return this.value;
+      },
+      set(value) {
+        this.name = value;
+        this.gender = value;
+      },
+    },
   },
 };
 </script>
