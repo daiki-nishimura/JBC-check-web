@@ -48,3 +48,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.v-btn {
+  width: 160px;
+}
+</style>
