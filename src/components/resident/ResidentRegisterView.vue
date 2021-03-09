@@ -40,6 +40,9 @@ export default {
 
   data() {
     return {
+      /**
+       * セレクトリストの選択肢
+       */
       genderItems: ['男', '女'],
     };
   },
