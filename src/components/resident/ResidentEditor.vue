@@ -12,13 +12,13 @@
 
     <v-text-field v-model="allergies" label="アレルギー"></v-text-field>
 
-    <v-text-field v-model="medicalHistory" label="病歴"></v-text-field>
+    <v-textarea v-model="medicalHistory" no-resize rows="1" label="病歴"></v-textarea>
 
-    <v-text-field v-model="preference" label="趣味嗜好"></v-text-field>
+    <v-textarea v-model="preference" no-resize rows="1" label="趣味嗜好"></v-textarea>
 
-    <v-text-field v-model="lifeHistory" label="生活歴"></v-text-field>
+    <v-textarea v-model="lifeHistory" no-resize rows="1" label="生活歴"></v-textarea>
 
-    <v-text-field v-model="remarks" label="備考"></v-text-field>
+    <v-textarea v-model="remarks" no-resize rows="1" label="備考"></v-textarea>
 
     <v-row class="mt-14" justify="center">
       <ResidentRegisterAction />
