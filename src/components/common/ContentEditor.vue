@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: `ContentOption`,
+  name: `ContentEditor`,
 };
 </script>
