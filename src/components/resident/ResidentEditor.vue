@@ -47,6 +47,9 @@ export default {
     };
   },
   computed: {
+    /**
+     * 利用者名
+     */
     name: {
       get() {
         return this.value;
@@ -55,6 +58,9 @@ export default {
         this.name = value;
       },
     },
+    /**
+     * 生年月日
+     */
     birthday: {
       get() {
         return this.value;
@@ -63,6 +69,9 @@ export default {
         this.birthday = value;
       },
     },
+    /**
+     * 性別
+     */
     gender: {
       get() {
         return this.value;
@@ -71,6 +80,9 @@ export default {
         this.gender = value;
       },
     },
+    /**
+     * 身長
+     */
     height: {
       get() {
         return this.value;
@@ -79,6 +91,9 @@ export default {
         this.height = value;
       },
     },
+    /**
+     * 体重
+     */
     weight: {
       get() {
         return this.value;
@@ -87,6 +102,9 @@ export default {
         this.weight = value;
       },
     },
+    /**
+     * アレルギー
+     */
     allergies: {
       get() {
         return this.value;
@@ -95,6 +113,9 @@ export default {
         this.allergies = value;
       },
     },
+    /**
+     * 病歴
+     */
     medicalHistory: {
       get() {
         return this.value;
@@ -103,6 +124,9 @@ export default {
         this.medicalHistory = value;
       },
     },
+    /**
+     * 趣味嗜好
+     */
     preference: {
       get() {
         return this.value;
@@ -111,6 +135,9 @@ export default {
         this.preference = value;
       },
     },
+    /**
+     * 生活歴
+     */
     lifeHistory: {
       get() {
         return this.value;
@@ -119,6 +146,9 @@ export default {
         this.lifeHistory = value;
       },
     },
+    /**
+     * 備考
+     */
     remarks: {
       get() {
         return this.value;
