@@ -10,15 +10,15 @@
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
 
-    <v-textarea v-model="allergies" no-resize rows="1" label="アレルギー"></v-textarea>
+    <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
-    <v-textarea v-model="medicalHistory" no-resize rows="1" label="病歴"></v-textarea>
+    <v-textarea v-model="medicalHistory" no-resize rows="3" label="病歴"></v-textarea>
 
-    <v-textarea v-model="preference" no-resize rows="1" label="趣味嗜好"></v-textarea>
+    <v-textarea v-model="preference" no-resize rows="3" label="趣味嗜好"></v-textarea>
 
-    <v-textarea v-model="lifeHistory" no-resize rows="1" label="生活歴"></v-textarea>
+    <v-textarea v-model="lifeHistory" no-resize rows="3" label="生活歴"></v-textarea>
 
-    <v-textarea v-model="remarks" no-resize rows="1" label="備考"></v-textarea>
+    <v-textarea v-model="remarks" no-resize rows="3" label="備考"></v-textarea>
 
     <v-row class="mt-14" justify="center">
       <ResidentRegisterAction />
@@ -133,6 +133,6 @@ export default {
 
 <style lang="scss">
 .v-btn {
-  width: 160px;
+  width: 360px;
 }
 </style>
