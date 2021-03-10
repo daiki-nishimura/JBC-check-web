@@ -44,63 +44,86 @@ export default {
        * セレクトリストの選択肢
        */
       genderItems: ['男', '女'],
-      /**
-       * 利用者名
-       */
-      name: '',
-      /**
-       * 生年月日
-       */
-      birthday: '',
-      /**
-       * 性別
-       */
-      gender: '',
-      /**
-       * 身長
-       */
-      height: '',
-      /**
-       * 体重
-       */
-      weight: '',
-      /**
-       * アレルギー
-       */
-      allergies: '',
-      /**
-       * 病歴
-       */
-      medicalHistory: '',
-      /**
-       * 趣味嗜好
-       */
-      preference: '',
-      /**
-       * 生活歴
-       */
-      lifeHistory: '',
-      /**
-       * 備考
-       */
-      remarks: '',
     };
   },
   computed: {
-    value: {
+    name: {
       get() {
         return this.value;
       },
       set(value) {
         this.name = value;
+      },
+    },
+    birthday: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.birthday = value;
+      },
+    },
+    gender: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.gender = value;
+      },
+    },
+    height: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.height = value;
+      },
+    },
+    weight: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.weight = value;
+      },
+    },
+    allergies: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.allergies = value;
+      },
+    },
+    medicalHistory: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.medicalHistory = value;
+      },
+    },
+    preference: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.preference = value;
+      },
+    },
+    lifeHistory: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.lifeHistory = value;
+      },
+    },
+    remarks: {
+      get() {
+        return this.value;
+      },
+      set(value) {
         this.remarks = value;
       },
     },
