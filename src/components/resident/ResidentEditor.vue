@@ -10,7 +10,7 @@
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
 
-    <v-text-field v-model="allergies" label="アレルギー"></v-text-field>
+    <v-textarea v-model="allergies" label="アレルギー"></v-textarea>
 
     <v-textarea v-model="medicalHistory" no-resize rows="1" label="病歴"></v-textarea>
 
