@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: `ContentEditorButtons`,
+};
+</script>
+
 <style lang="scss">
 .content-editor-buttons {
   .v-btn {
