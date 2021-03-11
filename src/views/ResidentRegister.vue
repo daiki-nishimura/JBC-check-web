@@ -1,24 +1,24 @@
 <template>
   <div>
-    <ContentEditor>
+    <ContentEditorLayout>
       <ResidentEditor />
       <v-row class="mt-14" justify="center">
         <ResidentRegisterAction />
       </v-row>
-    </ContentEditor>
+    </ContentEditorLayout>
   </div>
 </template>
 
 <script>
 import ResidentEditor from '@/components/resident/ResidentEditor.vue';
-import ContentEditor from '@/components/common/ContentEditor.vue';
+import ContentEditorLayout from '@/components/common/ContentEditorLayout.vue';
 import ResidentRegisterAction from '@/components/resident/ResidentRegisterAction.vue';
 
 export default {
   name: `ResidentRegister`,
 
   components: {
-    ContentEditor,
+    ContentEditorLayout,
     ResidentEditor,
     ResidentRegisterAction,
   },
