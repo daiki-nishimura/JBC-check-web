@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="mx-auto" height="1088" max-width="800">
+    <v-card class="mx-auto" max-width="800">
       <v-card-text>
         <slot />
       </v-card-text>
