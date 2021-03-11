@@ -2,9 +2,7 @@
   <div>
     <ContentEditorLayout>
       <ResidentEditor />
-      <v-row class="mt-14" justify="center">
-        <ResidentRegisterAction />
-      </v-row>
+      <ResidentRegisterAction />
     </ContentEditorLayout>
   </div>
 </template>
