@@ -1,5 +1,5 @@
 <template>
-  <ContentEditor>
+  <div>
     <v-text-field v-model="name" label="利用者名"></v-text-field>
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
@@ -19,24 +19,12 @@
     <v-textarea v-model="lifeHistory" no-resize rows="3" label="生活歴"></v-textarea>
 
     <v-textarea v-model="remarks" no-resize rows="3" label="備考"></v-textarea>
-
-    <v-row class="mt-14" justify="center">
-      <ResidentRegisterAction />
-    </v-row>
-  </ContentEditor>
+  </div>
 </template>
 
 <script>
-import ContentEditor from '@/components/common/ContentEditor.vue';
-import ResidentRegisterAction from '@/components/resident/ResidentRegisterAction.vue';
-
 export default {
   name: `ResidentEditor`,
-
-  components: {
-    ContentEditor,
-    ResidentRegisterAction,
-  },
 
   data() {
     return {
