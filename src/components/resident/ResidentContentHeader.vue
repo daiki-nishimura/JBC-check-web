@@ -1,6 +1,6 @@
 <template>
   <ContentHeader>
-    <v-btn icon>
+    <v-btn icon @click="register">
       <v-icon x-large>mdi-plus-circle</v-icon>
     </v-btn>
 
@@ -20,6 +20,14 @@ export default {
   components: {
     ContentHeaderDate,
     ContentHeader,
+  },
+  methods: {
+    register() {
+      this.$router.push({
+        name: 'ResidentRegister',
+        path: '/residents/register',
+      });
+    },
   },
 };
 </script>
