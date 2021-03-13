@@ -1,7 +1,7 @@
 <template>
   <v-card-actions class="justify-center">
     <ContentEditorButtons>
-      <v-btn color="cancel">キャンセル</v-btn>
+      <v-btn color="cancel" @click="$router.go(-1)">キャンセル</v-btn>
 
       <v-btn class="white--text" color="primary">登録</v-btn>
     </ContentEditorButtons>
