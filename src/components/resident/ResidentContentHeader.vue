@@ -25,7 +25,6 @@ export default {
     transitionOn() {
       this.$router.push({
         name: 'ResidentRegister',
-        path: '/residents/register',
       });
     },
   },
