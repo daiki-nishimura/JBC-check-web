@@ -1,6 +1,6 @@
 <template>
   <ContentHeader>
-    <v-btn icon @click="moveRegister">
+    <v-btn icon @click="movingRegister">
       <v-icon x-large>mdi-plus-circle</v-icon>
     </v-btn>
 
@@ -22,7 +22,7 @@ export default {
     ContentHeader,
   },
   methods: {
-    moveRegister() {
+    movingRegister() {
       this.$router.push({
         name: 'ResidentRegister',
       });
