@@ -1,7 +1,7 @@
 <template>
   <v-card-actions class="justify-center">
     <ContentEditorButtons>
-      <v-btn color="cancel" @click="movingRegister">キャンセル</v-btn>
+      <v-btn color="cancel" @click="cancel">キャンセル</v-btn>
 
       <v-btn class="white--text" color="primary">登録</v-btn>
     </ContentEditorButtons>
@@ -18,7 +18,7 @@ export default {
     ContentEditorButtons,
   },
   methods: {
-    movingRegister() {
+    cancel() {
       this.$router.push({
         name: 'ResidentList',
       });
