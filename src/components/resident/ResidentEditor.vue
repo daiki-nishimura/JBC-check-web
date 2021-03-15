@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { mapState, mapAction } from 'vuex';
+
 export default {
   name: `ResidentEditor`,
 
@@ -35,15 +37,16 @@ export default {
     };
   },
   computed: {
+    ...mapState('/resident/residentEditor', ['editingData']),
     /**
      * 利用者名
      */
     name: {
       get() {
-        return this.value;
+        return this.editingData.value;
       },
-      set(value) {
-        this.name = value;
+      set(name) {
+        this.setName = name;
       },
     },
     /**
@@ -145,6 +148,10 @@ export default {
         this.remarks = value;
       },
     },
+  },
+
+  methods: {
+    ...mapAction(),
   },
 };
 </script>
