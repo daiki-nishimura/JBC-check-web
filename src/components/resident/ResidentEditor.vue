@@ -36,9 +36,8 @@ export default {
       genderItems: ['男', '女'],
     };
   },
-  // mapstateにpath名を記述するとコンソールにmodule namespace not found in mapState(): path名とエラーが出る為、消してます。
   computed: {
-    ...mapState(['editingData']),
+    ...mapState('residentEditor', ['editingData']),
     /**
      * 利用者名
      */
