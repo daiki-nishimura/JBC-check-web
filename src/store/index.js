@@ -1,3 +1,4 @@
+// レビュー後コメント削除します
 import Vue from 'vue';
 import Vuex from 'vuex';
 import resident from './resident';

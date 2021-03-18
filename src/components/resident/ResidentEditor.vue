@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapState, mapAction } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
@@ -36,14 +36,15 @@ export default {
       genderItems: ['男', '女'],
     };
   },
+  // mapstateにpath名を記述するとコンソールにmodule namespace not found in mapState(): path名とエラーが出る為、消してます。
   computed: {
-    ...mapState('/resident/residentEditor', ['editingData']),
+    ...mapState(['editingData']),
     /**
      * 利用者名
      */
     name: {
       get() {
-        return this.editingData.value;
+        return this.editingData;
       },
       set(name) {
         this.setName = name;
@@ -54,10 +55,10 @@ export default {
      */
     birthday: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.birthday = value;
+      set(birthday) {
+        this.setBirthday = birthday;
       },
     },
     /**
@@ -65,10 +66,10 @@ export default {
      */
     gender: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.gender = value;
+      set(gender) {
+        this.setGender = gender;
       },
     },
     /**
@@ -76,10 +77,10 @@ export default {
      */
     height: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.height = value;
+      set(height) {
+        this.setHeight = height;
       },
     },
     /**
@@ -87,10 +88,10 @@ export default {
      */
     weight: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.weight = value;
+      set(weight) {
+        this.setWeight = weight;
       },
     },
     /**
@@ -98,10 +99,10 @@ export default {
      */
     allergies: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.allergies = value;
+      set(allergies) {
+        this.setAllergies = allergies;
       },
     },
     /**
@@ -109,10 +110,10 @@ export default {
      */
     medicalHistory: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.medicalHistory = value;
+      set(medicalHistory) {
+        this.setMedicalHistory = medicalHistory;
       },
     },
     /**
@@ -120,10 +121,10 @@ export default {
      */
     preference: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.preference = value;
+      set(preference) {
+        this.setPreference = preference;
       },
     },
     /**
@@ -131,10 +132,10 @@ export default {
      */
     lifeHistory: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.lifeHistory = value;
+      set(lifeHistory) {
+        this.setLifeHistory = lifeHistory;
       },
     },
     /**
@@ -142,16 +143,27 @@ export default {
      */
     remarks: {
       get() {
-        return this.value;
+        return this.editingData;
       },
-      set(value) {
-        this.remarks = value;
+      set(remarks) {
+        this.setRemarks = remarks;
       },
     },
   },
 
   methods: {
-    ...mapAction(),
+    ...mapActions('/resident/residentEditor', [
+      'setName',
+      'setBirthday',
+      'setGender',
+      'setHeight',
+      'setWeight',
+      'setAllergies',
+      'setMedicalHistory',
+      'setPreference',
+      'setLifeHistory',
+      'setRemarks',
+    ]),
   },
 };
 </script>
