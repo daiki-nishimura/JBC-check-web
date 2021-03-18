@@ -46,7 +46,7 @@ export default {
         return this.editingData.name;
       },
       set(name) {
-        this.setName = name;
+        this.setName({ name });
       },
     },
     /**
@@ -57,7 +57,7 @@ export default {
         return this.editingData.birthday;
       },
       set(birthday) {
-        this.setBirthday = birthday;
+        this.setBirthday({ birthday });
       },
     },
     /**
@@ -68,7 +68,7 @@ export default {
         return this.editingData.gender;
       },
       set(gender) {
-        this.setGender = gender;
+        this.setGender({ gender });
       },
     },
     /**
@@ -79,7 +79,7 @@ export default {
         return this.editingData.height;
       },
       set(height) {
-        this.setHeight = height;
+        this.setHeight({ height });
       },
     },
     /**
@@ -90,7 +90,7 @@ export default {
         return this.editingData.weight;
       },
       set(weight) {
-        this.setWeight = weight;
+        this.setWeight({ weight });
       },
     },
     /**
@@ -101,7 +101,7 @@ export default {
         return this.editingData.allergies;
       },
       set(allergies) {
-        this.setAllergies = allergies;
+        this.setAllergies({ allergies });
       },
     },
     /**
@@ -112,7 +112,7 @@ export default {
         return this.editingData.medicalHistory;
       },
       set(medicalHistory) {
-        this.setMedicalHistory = medicalHistory;
+        this.setMedicalHistory({ medicalHistory });
       },
     },
     /**
@@ -123,7 +123,7 @@ export default {
         return this.editingData.preference;
       },
       set(preference) {
-        this.setPreference = preference;
+        this.setPreference({ preference });
       },
     },
     /**
@@ -134,7 +134,7 @@ export default {
         return this.editingData.lifeHistory;
       },
       set(lifeHistory) {
-        this.setLifeHistory = lifeHistory;
+        this.setLifeHistory({ lifeHistory });
       },
     },
     /**
@@ -145,7 +145,7 @@ export default {
         return this.editingData.remarks;
       },
       set(remarks) {
-        this.setRemarks = remarks;
+        this.setRemarks({ remarks });
       },
     },
   },
