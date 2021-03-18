@@ -151,7 +151,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('/resident/residentEditor', [
+    ...mapActions('residentEditor', [
       'setName',
       'setBirthday',
       'setGender',
