@@ -43,7 +43,7 @@ export default {
      */
     name: {
       get() {
-        return this.editingData;
+        return this.editingData.name;
       },
       set(name) {
         this.setName = name;
@@ -54,7 +54,7 @@ export default {
      */
     birthday: {
       get() {
-        return this.editingData;
+        return this.editingData.birthday;
       },
       set(birthday) {
         this.setBirthday = birthday;
@@ -65,7 +65,7 @@ export default {
      */
     gender: {
       get() {
-        return this.editingData;
+        return this.editingData.gender;
       },
       set(gender) {
         this.setGender = gender;
@@ -76,7 +76,7 @@ export default {
      */
     height: {
       get() {
-        return this.editingData;
+        return this.editingData.height;
       },
       set(height) {
         this.setHeight = height;
@@ -87,7 +87,7 @@ export default {
      */
     weight: {
       get() {
-        return this.editingData;
+        return this.editingData.weight;
       },
       set(weight) {
         this.setWeight = weight;
@@ -98,7 +98,7 @@ export default {
      */
     allergies: {
       get() {
-        return this.editingData;
+        return this.editingData.allergies;
       },
       set(allergies) {
         this.setAllergies = allergies;
@@ -109,7 +109,7 @@ export default {
      */
     medicalHistory: {
       get() {
-        return this.editingData;
+        return this.editingData.medicalHistory;
       },
       set(medicalHistory) {
         this.setMedicalHistory = medicalHistory;
@@ -120,7 +120,7 @@ export default {
      */
     preference: {
       get() {
-        return this.editingData;
+        return this.editingData.preference;
       },
       set(preference) {
         this.setPreference = preference;
@@ -131,7 +131,7 @@ export default {
      */
     lifeHistory: {
       get() {
-        return this.editingData;
+        return this.editingData.lifeHistory;
       },
       set(lifeHistory) {
         this.setLifeHistory = lifeHistory;
@@ -142,7 +142,7 @@ export default {
      */
     remarks: {
       get() {
-        return this.editingData;
+        return this.editingData.remarks;
       },
       set(remarks) {
         this.setRemarks = remarks;
