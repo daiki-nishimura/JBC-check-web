@@ -1,15 +1,15 @@
 export const state = {
   editingData: {
-    name: '',
-    birthday: '',
-    gender: '',
-    height: '',
-    weight: '',
-    allergies: '',
-    medicalHistory: '',
-    preference: '',
-    lifeHistory: '',
-    remarks: '',
+    name: null,
+    birthday: null,
+    gender: null,
+    height: null,
+    weight: null,
+    allergies: null,
+    medicalHistory: null,
+    preference: null,
+    lifeHistory: null,
+    remarks: null,
   },
 };
 
@@ -45,7 +45,7 @@ export const mutations = {
     state.editingData.remarks = remarks;
   },
 };
-// すみませんここの変更の指示との差分がわかりませんでした
+
 export const actions = {
   setName({ commit }, { name }) {
     commit('name', { name });
