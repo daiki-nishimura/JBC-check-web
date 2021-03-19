@@ -45,10 +45,37 @@ export const mutations = {
     state.editingData.remarks = remarks;
   },
 };
-
+// すみませんここの変更の指示との差分がわかりませんでした
 export const actions = {
   setName({ commit }, { name }) {
     commit('name', { name });
+  },
+  setBirthday({ commit }, { birthday }) {
+    commit('birthday', { birthday });
+  },
+  setGender({ commit }, { gender }) {
+    commit('gender', { gender });
+  },
+  setHeight({ commit }, { height }) {
+    commit('height', { height });
+  },
+  setWeight({ commit }, { weight }) {
+    commit('weight', { weight });
+  },
+  setAllergies({ commit }, { allergies }) {
+    commit('allergies', { allergies });
+  },
+  setMedicalHistory({ commit }, { medicalHistory }) {
+    commit('medicalHistory', { medicalHistory });
+  },
+  setPreference({ commit }, { preference }) {
+    commit('preference', { preference });
+  },
+  setLifeHistory({ commit }, { lifeHistory }) {
+    commit('lifeHistory', { lifeHistory });
+  },
+  setRemarks({ commit }, { remarks }) {
+    commit('remarks', { remarks });
   },
 };
 
