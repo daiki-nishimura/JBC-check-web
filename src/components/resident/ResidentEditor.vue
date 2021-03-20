@@ -36,6 +36,7 @@ export default {
       genderItems: ['男', '女'],
     };
   },
+
   computed: {
     ...mapState('residentEditor', ['editingData']),
     /**
@@ -49,6 +50,7 @@ export default {
         this.setName({ name });
       },
     },
+
     /**
      * 生年月日
      */
@@ -60,6 +62,7 @@ export default {
         this.setBirthday({ birthday });
       },
     },
+
     /**
      * 性別
      */
@@ -71,6 +74,7 @@ export default {
         this.setGender({ gender });
       },
     },
+
     /**
      * 身長
      */
@@ -82,6 +86,7 @@ export default {
         this.setHeight({ height });
       },
     },
+
     /**
      * 体重
      */
@@ -93,6 +98,7 @@ export default {
         this.setWeight({ weight });
       },
     },
+
     /**
      * アレルギー
      */
@@ -104,6 +110,7 @@ export default {
         this.setAllergies({ allergies });
       },
     },
+
     /**
      * 病歴
      */
@@ -115,6 +122,7 @@ export default {
         this.setMedicalHistory({ medicalHistory });
       },
     },
+
     /**
      * 趣味嗜好
      */
@@ -126,6 +134,7 @@ export default {
         this.setPreference({ preference });
       },
     },
+
     /**
      * 生活歴
      */
@@ -137,6 +146,7 @@ export default {
         this.setLifeHistory({ lifeHistory });
       },
     },
+
     /**
      * 備考
      */
