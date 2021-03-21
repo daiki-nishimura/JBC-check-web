@@ -39,6 +39,7 @@ export default {
 
   computed: {
     ...mapState('residentEditor', ['editingData']),
+
     /**
      * 利用者名
      */
