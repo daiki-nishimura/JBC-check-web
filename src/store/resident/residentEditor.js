@@ -156,8 +156,8 @@ export const actions = {
 
   /**
    * 生年月日を設定する
-   * @param birthday
    * @param commit
+   * @param birthday
    */
   setBirthday({ commit }, { birthday }) {
     commit('birthday', { birthday });
@@ -165,8 +165,8 @@ export const actions = {
 
   /**
    * 性別を設定する
-   * @param gender
    * @param commit
+   * @param gender
    */
   setGender({ commit }, { gender }) {
     commit('gender', { gender });
@@ -174,8 +174,8 @@ export const actions = {
 
   /**
    * 身長を設定する
-   * @param height
    * @param commit
+   * @param height
    */
   setHeight({ commit }, { height }) {
     commit('height', { height });
@@ -183,8 +183,8 @@ export const actions = {
 
   /**
    * 体重を設定する
-   * @param weight
    * @param commit
+   * @param weight
    */
   setWeight({ commit }, { weight }) {
     commit('weight', { weight });
@@ -192,8 +192,8 @@ export const actions = {
 
   /**
    * アレルギーを設定する
-   * @param allergies
    * @param commit
+   * @param allergies
    */
   setAllergies({ commit }, { allergies }) {
     commit('allergies', { allergies });
@@ -201,8 +201,8 @@ export const actions = {
 
   /**
    * 病歴を設定する
-   * @param medicalHistory
    * @param commit
+   * @param medicalHistory
    */
   setMedicalHistory({ commit }, { medicalHistory }) {
     commit('medicalHistory', { medicalHistory });
@@ -210,8 +210,8 @@ export const actions = {
 
   /**
    * 趣味嗜好を設定する
-   * @param preference
    * @param commit
+   * @param preference
    */
   setPreference({ commit }, { preference }) {
     commit('preference', { preference });
@@ -219,8 +219,8 @@ export const actions = {
 
   /**
    * 生活歴を設定する
-   * @param lifeHistory
    * @param commit
+   * @param lifeHistory
    */
   setLifeHistory({ commit }, { lifeHistory }) {
     commit('lifeHistory', { lifeHistory });
@@ -228,8 +228,8 @@ export const actions = {
 
   /**
    * 備考を設定する
-   * @param remarks
    * @param commit
+   * @param remarks
    */
   setRemarks({ commit }, { remarks }) {
     commit('remarks', { remarks });
