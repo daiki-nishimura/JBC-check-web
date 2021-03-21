@@ -72,7 +72,7 @@ export const mutations = {
   },
 
   /**
-   * 性別の
+   * 性別の変更
    * @param state
    * @param gender
    */
