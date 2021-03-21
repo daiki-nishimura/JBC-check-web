@@ -1,14 +1,53 @@
 export const state = {
   editingData: {
+    /**
+     * 利用者名
+     */
     name: null,
+
+    /**
+     * 生年月日
+     */
     birthday: null,
+
+    /**
+     * 性別
+     */
     gender: null,
+
+    /**
+     * 身長
+     */
     height: null,
+
+    /**
+     * 体重
+     */
     weight: null,
+
+    /**
+     * アレルギー
+     */
     allergies: null,
+
+    /**
+     * 病歴
+     */
     medicalHistory: null,
+
+    /**
+     * 趣味嗜好
+     */
     preference: null,
+
+    /**
+     * 生活歴
+     */
     lifeHistory: null,
+
+    /**
+     * 備考
+     */
     remarks: null,
   },
 };
@@ -22,6 +61,7 @@ export const mutations = {
   name(state, { name }) {
     state.editingData.name = name;
   },
+
   /**
    * 生年月日の変更
    * @param  state
@@ -30,6 +70,7 @@ export const mutations = {
   birthday(state, { birthday }) {
     state.editingData.birthday = birthday;
   },
+
   /**
    * 性別の
    * @param state
@@ -38,6 +79,7 @@ export const mutations = {
   gender(state, { gender }) {
     state.editingData.gender = gender;
   },
+
   /**
    * 身長の更新
    * @param state
@@ -46,6 +88,7 @@ export const mutations = {
   height(state, { height }) {
     state.editingData.height = height;
   },
+
   /**
    * 体重の更新
    * @param state
@@ -54,6 +97,7 @@ export const mutations = {
   weight(state, { weight }) {
     state.editingData.weight = weight;
   },
+
   /**
    * アレルギーの更新
    * @param state
@@ -62,6 +106,7 @@ export const mutations = {
   allergies(state, { allergies }) {
     state.editingData.allergies = allergies;
   },
+
   /**
    * 病歴の更新
    * @param state
@@ -70,6 +115,7 @@ export const mutations = {
   medicalHistory(state, { medicalHistory }) {
     state.editingData.medicalHistory = medicalHistory;
   },
+
   /**
    * 趣味嗜好の更新
    * @param state
@@ -78,6 +124,7 @@ export const mutations = {
   preference(state, { preference }) {
     state.editingData.preference = preference;
   },
+
   /**
    * 生活歴の更新
    * @param state
@@ -86,6 +133,7 @@ export const mutations = {
   lifeHistory(state, { lifeHistory }) {
     state.editingData.lifeHistory = lifeHistory;
   },
+
   /**
    * 備考の更新
    * @param state
@@ -174,10 +222,10 @@ export const actions = {
    * @param lifeHistory
    * @param commit
    */
-
   setLifeHistory({ commit }, { lifeHistory }) {
     commit('lifeHistory', { lifeHistory });
   },
+
   /**
    * 備考を設定する
    * @param remarks
