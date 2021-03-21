@@ -81,7 +81,7 @@ export const mutations = {
   },
 
   /**
-   * 身長の更新
+   * 身長の変更
    * @param state
    * @param height
    */
@@ -90,7 +90,7 @@ export const mutations = {
   },
 
   /**
-   * 体重の更新
+   * 体重の変更
    * @param state
    * @param weight
    */
@@ -99,7 +99,7 @@ export const mutations = {
   },
 
   /**
-   * アレルギーの更新
+   * アレルギーの変更
    * @param state
    * @param allergies
    */
@@ -108,7 +108,7 @@ export const mutations = {
   },
 
   /**
-   * 病歴の更新
+   * 病歴の変更
    * @param state
    * @param medicalHistory
    */
@@ -117,7 +117,7 @@ export const mutations = {
   },
 
   /**
-   * 趣味嗜好の更新
+   * 趣味嗜好の変更
    * @param state
    * @param preference
    */
@@ -126,7 +126,7 @@ export const mutations = {
   },
 
   /**
-   * 生活歴の更新
+   * 生活歴の変更
    * @param state
    * @param lifeHistory
    */
@@ -135,7 +135,7 @@ export const mutations = {
   },
 
   /**
-   * 備考の更新
+   * 備考の変更
    * @param state
    * @param remarks
    */
