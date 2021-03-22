@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
+
 export default {
   name: `ResidentEditor`,
 
@@ -34,117 +36,144 @@ export default {
       genderItems: ['男', '女'],
     };
   },
+
   computed: {
+    ...mapState('residentEditor', ['editingData']),
+
     /**
      * 利用者名
      */
     name: {
       get() {
-        return this.value;
+        return this.editingData.name;
       },
-      set(value) {
-        this.name = value;
+      set(name) {
+        this.setName({ name });
       },
     },
+
     /**
      * 生年月日
      */
     birthday: {
       get() {
-        return this.value;
+        return this.editingData.birthday;
       },
-      set(value) {
-        this.birthday = value;
+      set(birthday) {
+        this.setBirthday({ birthday });
       },
     },
+
     /**
      * 性別
      */
     gender: {
       get() {
-        return this.value;
+        return this.editingData.gender;
       },
-      set(value) {
-        this.gender = value;
+      set(gender) {
+        this.setGender({ gender });
       },
     },
+
     /**
      * 身長
      */
     height: {
       get() {
-        return this.value;
+        return this.editingData.height;
       },
-      set(value) {
-        this.height = value;
+      set(height) {
+        this.setHeight({ height });
       },
     },
+
     /**
      * 体重
      */
     weight: {
       get() {
-        return this.value;
+        return this.editingData.weight;
       },
-      set(value) {
-        this.weight = value;
+      set(weight) {
+        this.setWeight({ weight });
       },
     },
+
     /**
      * アレルギー
      */
     allergies: {
       get() {
-        return this.value;
+        return this.editingData.allergies;
       },
-      set(value) {
-        this.allergies = value;
+      set(allergies) {
+        this.setAllergies({ allergies });
       },
     },
+
     /**
      * 病歴
      */
     medicalHistory: {
       get() {
-        return this.value;
+        return this.editingData.medicalHistory;
       },
-      set(value) {
-        this.medicalHistory = value;
+      set(medicalHistory) {
+        this.setMedicalHistory({ medicalHistory });
       },
     },
+
     /**
      * 趣味嗜好
      */
     preference: {
       get() {
-        return this.value;
+        return this.editingData.preference;
       },
-      set(value) {
-        this.preference = value;
+      set(preference) {
+        this.setPreference({ preference });
       },
     },
+
     /**
      * 生活歴
      */
     lifeHistory: {
       get() {
-        return this.value;
+        return this.editingData.lifeHistory;
       },
-      set(value) {
-        this.lifeHistory = value;
+      set(lifeHistory) {
+        this.setLifeHistory({ lifeHistory });
       },
     },
+
     /**
      * 備考
      */
     remarks: {
       get() {
-        return this.value;
+        return this.editingData.remarks;
       },
-      set(value) {
-        this.remarks = value;
+      set(remarks) {
+        this.setRemarks({ remarks });
       },
     },
+  },
+
+  methods: {
+    ...mapActions('residentEditor', [
+      'setName',
+      'setBirthday',
+      'setGender',
+      'setHeight',
+      'setWeight',
+      'setAllergies',
+      'setMedicalHistory',
+      'setPreference',
+      'setLifeHistory',
+      'setRemarks',
+    ]),
   },
 };
 </script>
