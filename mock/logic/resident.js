@@ -6,9 +6,8 @@ const query = () => {
   return data.residents;
 };
 
-const fetch = (residentId) => {
-  console.log(residentId);
-};
+const fetch = (id) => data.residents.find((params) => params.id === id);
+console.log(data.residents);
 
 const register = () => {
   register.id = logic.util.createUniqueId();
