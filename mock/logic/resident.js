@@ -6,14 +6,13 @@ const query = () => {
   return data.residents;
 };
 
-const fetch = (id) => data.residents.find((params) => params.id === id);
+const fetch = (residentId) => data.residents.find((r) => r.id === residentId);
 console.log(data.residents);
 
 const register = () => {
   register.id = logic.util.createUniqueId();
   console.log(data.residents);
 };
-
 const update = (residentId) => {
   console.log(residentId);
   console.log(data.residents);
