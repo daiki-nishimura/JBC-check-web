@@ -12,6 +12,16 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', routers);
+app.use(express.json());
+
+app.post('/', (req, res) => {
+  // リクエストボディを出力
+  console.log(req.body);
+  // パラメータ名、nameを出力
+  console.log(req.body.name);
+
+  res.send('POST request to the homepage');
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
