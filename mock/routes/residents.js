@@ -18,9 +18,31 @@ router.get('/:residentId', (req, res) => {
   res.json(resident);
 });
 
-router.post('/', (req, res) => {
-  const { resident } = req.body;
-  const newResident = logic.resident.register(resident);
+router.post('/register', (req, res) => {
+  const {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  } = req.body;
+  const newResident = logic.resident.register(
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks
+  );
 
   res.status(201);
   res.json(newResident);
@@ -35,7 +57,8 @@ router.post('/', (req, res) => {
 
 router.put('/:residentId', (req, res) => {
   const residentId = Number(req.param.residentId);
-  const resident = logic.resident.update(residentId);
+  const { name } = req.body;
+  const resident = logic.resident.update(residentId, { name });
 
   res.json(resident);
 });
