@@ -1,30 +1,86 @@
 const data = require('../data');
 const logic = require('.');
 
-const query = () => {
-  console.log(data.residents);
-  return data.residents;
-};
+const query = () => data.residents;
 
 const fetch = (residentId) => data.residents.find((r) => r.id === residentId);
-console.log(data.residents);
 
-const register = () => {
-  register.id = logic.util.createUniqueId();
-  console.log(data.residents);
-};
-const update = (residentId) => {
-  console.log(residentId);
-  console.log(data.residents);
+const register = (
+  name,
+  birthday,
+  gender,
+  height,
+  weight,
+  allergies,
+  medicalHistory,
+  preference,
+  lifeHistory,
+  remarks
+) => {
+  const resident = {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  };
+
+  resident.id = logic.util.createUniqueId();
+
+  data.residents.push(resident);
+
+  return resident;
 };
 
-const destory = (residentId) => {
-  console.log(residentId);
-  console.log(data.residents);
-};
+// const update = (
+//   residentId,
+//   {
+//     name,
+//     birthday,
+//     gender,
+//     height,
+//     weight,
+//     allergies,
+//     medicalHistory,
+//     preference,
+//     lifeHistory,
+//     remarks,
+//   }
+// ) => {
+//   console.log('更新前 data');
+//   console.log(data.residents);
+//   const resident = {
+//     name,
+//     birthday,
+//     gender,
+//     height,
+//     weight,
+//     allergies,
+//     medicalHistory,
+//     preference,
+//     lifeHistory,
+//     remarks,
+//   };
+//   console.log('更新後 data');
+//   console.log(data.residents);
+// };
+
+// const destory = (residentId) => {
+//   console.log('削除前 data');
+//   console.log(data.residents);
+//   const fetch = (residentId) => data.residents.find((r) => r.id === residentId);
+//   const residentId = { name };
+//   console.log('削除後 data');
+//   console.log(data.residents);
+// };
 
 exports.query = query;
 exports.fetch = fetch;
 exports.register = register;
-exports.update = update;
-exports.destory = destory;
+// exports.update = update;
+// exports.destory = destory;
