@@ -55,11 +55,34 @@ router.post('/register', (req, res) => {
   // res.status(201);
 });
 
-router.put('/:residentId', (req, res) => {
+router.put('/edit/:residentId', (req, res) => {
   const residentId = Number(req.param.residentId);
-  const { name } = req.body;
-  const resident = logic.resident.update(residentId, { name });
+  const {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  } = req.body;
+  const resident = logic.resident.update(residentId, {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  });
 
+  res.status(201);
   res.json(resident);
 });
 
