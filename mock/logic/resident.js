@@ -37,38 +37,45 @@ const register = (
   return resident;
 };
 
-// const update = (
-//   residentId,
-//   {
-//     name,
-//     birthday,
-//     gender,
-//     height,
-//     weight,
-//     allergies,
-//     medicalHistory,
-//     preference,
-//     lifeHistory,
-//     remarks,
-//   }
-// ) => {
-//   console.log('更新前 data');
-//   console.log(data.residents);
-//   const resident = {
-//     name,
-//     birthday,
-//     gender,
-//     height,
-//     weight,
-//     allergies,
-//     medicalHistory,
-//     preference,
-//     lifeHistory,
-//     remarks,
-//   };
-//   console.log('更新後 data');
-//   console.log(data.residents);
-// };
+const update = (
+  residentId,
+  {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  }
+) => {
+  console.log('更新前 data');
+  console.log(data.residents);
+
+  const resident = {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  };
+
+  data.residents.find((r) => r.id === residentId);
+
+  console.log('更新後 data');
+
+  console.log(resident);
+
+  return resident;
+};
 
 // const destory = (residentId) => {
 //   console.log('削除前 data');
@@ -82,5 +89,5 @@ const register = (
 exports.query = query;
 exports.fetch = fetch;
 exports.register = register;
-// exports.update = update;
+exports.update = update;
 // exports.destory = destory;
