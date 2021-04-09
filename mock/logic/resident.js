@@ -76,28 +76,17 @@ const update = (
   return resident;
 };
 
-// // const destory = (residentId) => {
-// //   console.log('削除前 data');
-// //   console.log(data.residents);
-// //   (residentId) => data.residents.find((r) => r.id === residentId);
-// //   const residentId = {
-// //     name,
-// //     birthday,
-// //     gender,
-// //     height,
-// //     weight,
-// //     allergies,
-// //     medicalHistory,
-// //     preference,
-// //     lifeHistory,
-// //     remarks,
-// //   };
-// //   console.log('削除後 data');
-// //   console.log(data.residents);
-// };
+const destory = (residentId) => {
+  console.log('削除前 data');
+  console.log(data.residents);
+  const tergetIndex = data.residents.findIndex((r) => r.id === residentId);
+  data.residents.splice(tergetIndex, 1);
+  console.log('削除後 data');
+  console.log(data.residents);
+};
 
 exports.query = query;
 exports.fetch = fetch;
 exports.register = register;
 exports.update = update;
-// exports.destory = destory;
+exports.destory = destory;
