@@ -83,7 +83,7 @@ router.delete('/:residentId', (req, res) => {
   const residentId = Number(req.params.residentId);
   logic.resident.destory(residentId);
 
-  res.sendStatus(200);
+  res.sendStatus(204);
 });
 
 module.exports = router;
