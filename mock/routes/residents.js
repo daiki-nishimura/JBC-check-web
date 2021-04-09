@@ -46,17 +46,10 @@ router.post('/register', (req, res) => {
 
   res.status(201);
   res.json(newResident);
-
-  // res.status(200);
-  // res.json(resident);
-
-  // res.status(200);
-
-  // res.status(201);
 });
 
 router.put('/edit/:residentId', (req, res) => {
-  const residentId = Number(req.param.residentId);
+  const residentId = Number(req.params.residentId);
   const {
     name,
     birthday,
@@ -87,7 +80,7 @@ router.put('/edit/:residentId', (req, res) => {
 });
 
 router.delete('/:residentId', (req, res) => {
-  const residentId = Number(req.param.residentId);
+  const residentId = Number(req.params.residentId);
   logic.resident.destory(residentId);
 
   res.sendStatus(200);
