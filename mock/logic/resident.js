@@ -79,8 +79,8 @@ const update = (
 const destory = (residentId) => {
   console.log('削除前 data');
   console.log(data.residents);
-  const tergetIndex = data.residents.findIndex((r) => r.id === residentId);
-  data.residents.splice(tergetIndex, 1);
+  const targetIndex = data.residents.findIndex((r) => r.id === residentId);
+  data.residents.splice(targetIndex, 1);
   console.log('削除後 data');
   console.log(data.residents);
 };
