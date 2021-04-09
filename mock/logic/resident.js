@@ -53,8 +53,8 @@ const update = (
   }
 ) => {
   console.log('更新前 data');
-  console.log(data.residents);
 
+  console.log(data.residents);
   const resident = {
     name,
     birthday,
@@ -68,22 +68,32 @@ const update = (
     remarks,
   };
 
-  data.residents.find((r) => r.id === residentId);
-
   console.log('更新後 data');
-
-  console.log(resident);
+  const residentData = data.residents.find((r) => r.id === residentId);
+  resident.id = residentData.id;
+  console.log(residentData);
 
   return resident;
 };
 
-// const destory = (residentId) => {
-//   console.log('削除前 data');
-//   console.log(data.residents);
-//   const fetch = (residentId) => data.residents.find((r) => r.id === residentId);
-//   const residentId = { name };
-//   console.log('削除後 data');
-//   console.log(data.residents);
+// // const destory = (residentId) => {
+// //   console.log('削除前 data');
+// //   console.log(data.residents);
+// //   (residentId) => data.residents.find((r) => r.id === residentId);
+// //   const residentId = {
+// //     name,
+// //     birthday,
+// //     gender,
+// //     height,
+// //     weight,
+// //     allergies,
+// //     medicalHistory,
+// //     preference,
+// //     lifeHistory,
+// //     remarks,
+// //   };
+// //   console.log('削除後 data');
+// //   console.log(data.residents);
 // };
 
 exports.query = query;
