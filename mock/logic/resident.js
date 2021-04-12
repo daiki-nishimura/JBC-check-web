@@ -53,7 +53,6 @@ const update = (
   }
 ) => {
   console.log('更新前 data');
-
   console.log(data.residents);
   const resident = {
     name,
@@ -67,22 +66,32 @@ const update = (
     lifeHistory,
     remarks,
   };
-
+  const residentData =
+    (resident,
+    data.residents.find((r) => r.id === residentId),
+    {
+      name,
+      birthday,
+      gender,
+      height,
+      weight,
+      allergies,
+      medicalHistory,
+      preference,
+      lifeHistory,
+      remarks,
+    });
+  residentData.id = residentId;
   console.log('更新後 data');
-  const residentData = data.residents.find((r) => r.id === residentId);
-  resident.id = residentData.id;
   console.log(residentData);
 
-  return resident;
+  return residentData;
 };
 
 const destory = (residentId) => {
-  console.log('削除前 data');
   console.log(data.residents);
   const targetIndex = data.residents.findIndex((r) => r.id === residentId);
   data.residents.splice(targetIndex, 1);
-  console.log('削除後 data');
-  console.log(data.residents);
 };
 
 exports.query = query;
