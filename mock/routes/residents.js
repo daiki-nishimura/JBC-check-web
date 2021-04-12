@@ -79,7 +79,7 @@ router.put('/edit/:residentId', (req, res) => {
   res.json(resident);
 });
 
-router.delete('/:residentId', (req, res) => {
+router.delete('/delete/:residentId', (req, res) => {
   const residentId = Number(req.params.residentId);
   logic.resident.destory(residentId);
 
