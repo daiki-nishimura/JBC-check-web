@@ -30,7 +30,7 @@ router.post('/register', (req, res) => {
     lifeHistory,
     remarks,
   } = req.body;
-  const newResident = logic.resident.register(
+  const addResident = logic.resident.register(
     name,
     birthday,
     gender,
@@ -44,7 +44,7 @@ router.post('/register', (req, res) => {
   );
 
   res.status(201);
-  res.json(newResident);
+  res.json(addResident);
 });
 
 router.put('/edit/:residentId', (req, res) => {
