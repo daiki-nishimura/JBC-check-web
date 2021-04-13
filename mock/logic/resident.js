@@ -30,6 +30,7 @@ const register = (
     remarks,
   };
   resident.id = logic.util.createUniqueId();
+  resident.deleted = false;
 
   data.residents.push(resident);
 
