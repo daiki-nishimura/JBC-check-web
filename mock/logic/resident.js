@@ -68,10 +68,37 @@ const update = (
   return resident;
 };
 
-const destory = (residentId) => {
-  const targetIndex = data.residents.findIndex((r) => r.id === residentId);
+const destory = (
+  residentId,
+  {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  }
+) => {
+  const resident = data.residents.find((r) => r.id === residentId, {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  });
 
-  data.residents.splice(targetIndex, 1);
+  resident.deleted = true;
+
+  return resident;
 };
 
 exports.query = query;
