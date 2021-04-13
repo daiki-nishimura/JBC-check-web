@@ -17,7 +17,7 @@ router.get('/:residentId', (req, res) => {
   res.json(resident);
 });
 
-router.post('/register', (req, res) => {
+router.post('/', (req, res) => {
   const {
     name,
     birthday,
