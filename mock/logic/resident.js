@@ -51,20 +51,20 @@ const update = (
     remarks,
   }
 ) => {
-  const residentData = data.residents.find((r) => r.id === residentId);
+  const resident = data.residents.find((r) => r.id === residentId);
 
-  residentData.name = name;
-  residentData.birthday = birthday;
-  residentData.gender = gender;
-  residentData.height = height;
-  residentData.weight = weight;
-  residentData.allergies = allergies;
-  residentData.medicalHistory = medicalHistory;
-  residentData.preference = preference;
-  residentData.lifeHistory = lifeHistory;
-  residentData.remarks = remarks;
+  resident.name = name;
+  resident.birthday = birthday;
+  resident.gender = gender;
+  resident.height = height;
+  resident.weight = weight;
+  resident.allergies = allergies;
+  resident.medicalHistory = medicalHistory;
+  resident.preference = preference;
+  resident.lifeHistory = lifeHistory;
+  resident.remarks = remarks;
 
-  return residentData;
+  return resident;
 };
 
 const destory = (residentId) => {
