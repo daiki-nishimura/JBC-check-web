@@ -80,9 +80,33 @@ router.put('/edit/:residentId', (req, res) => {
 
 router.delete('/delete/:residentId', (req, res) => {
   const residentId = Number(req.params.residentId);
-  logic.resident.destory(residentId);
+  const {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  } = req.body;
+  const resident = logic.resident.destory(residentId, {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  });
 
-  res.sendStatus(204);
+  res.status(204);
+  res.json(resident);
 });
 
 module.exports = router;
