@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
   res.json(resident);
 });
 
-router.put('/edit/:residentId', (req, res) => {
+router.put('/:residentId', (req, res) => {
   const residentId = Number(req.params.residentId);
   const {
     name,
