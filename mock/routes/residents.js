@@ -7,7 +7,7 @@ const logic = require('../logic');
 router.get('/', (req, res) => {
   const residents = logic.resident.query();
 
-  res.json(residents);
+  res.json({ residents });
 });
 
 router.get('/:residentId', (req, res) => {
