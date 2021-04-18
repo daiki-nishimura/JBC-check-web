@@ -51,8 +51,6 @@ const destory = (residentId) => {
   const resident = data.residents.find((r) => r.id === residentId);
 
   resident.deleted = true;
-
-  return resident;
 };
 
 exports.query = query;
