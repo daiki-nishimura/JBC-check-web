@@ -78,7 +78,7 @@ router.put('/:residentId', (req, res) => {
   res.json(resident);
 });
 
-router.delete('/delete/:residentId', (req, res) => {
+router.delete('/:residentId', (req, res) => {
   const residentId = Number(req.params.residentId);
   const {
     name,
