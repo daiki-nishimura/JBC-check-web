@@ -47,33 +47,8 @@ const update = (
   return resident;
 };
 
-const destory = (
-  residentId,
-  {
-    name,
-    birthday,
-    gender,
-    height,
-    weight,
-    allergies,
-    medicalHistory,
-    preference,
-    lifeHistory,
-    remarks,
-  }
-) => {
+const destory = (residentId) => {
   const resident = data.residents.find((r) => r.id === residentId);
-
-  resident.name = name;
-  resident.birthday = birthday;
-  resident.gender = gender;
-  resident.height = height;
-  resident.weight = weight;
-  resident.allergies = allergies;
-  resident.medicalHistory = medicalHistory;
-  resident.preference = preference;
-  resident.lifeHistory = lifeHistory;
-  resident.remarks = remarks;
 
   resident.deleted = true;
 
