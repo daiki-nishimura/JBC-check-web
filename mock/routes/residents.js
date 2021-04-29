@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
     lifeHistory,
     remarks,
   } = req.body;
-  const resident = logic.resident.register(
+  const resident = logic.resident.register({
     name,
     birthday,
     gender,
@@ -40,8 +40,8 @@ router.post('/', (req, res) => {
     medicalHistory,
     preference,
     lifeHistory,
-    remarks
-  );
+    remarks,
+  });
 
   res.status(201);
   res.json(resident);
