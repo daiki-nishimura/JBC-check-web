@@ -5,8 +5,30 @@ const query = () => data.residents;
 
 const fetch = (residentId) => data.residents.find((r) => r.id === residentId);
 
-const register = (residents) => {
-  const resident = residents;
+const register = ({
+  name,
+  birthday,
+  gender,
+  height,
+  weight,
+  allergies,
+  medicalHistory,
+  preference,
+  lifeHistory,
+  remarks,
+}) => {
+  const resident = {
+    name,
+    birthday,
+    gender,
+    height,
+    weight,
+    allergies,
+    medicalHistory,
+    preference,
+    lifeHistory,
+    remarks,
+  };
 
   resident.id = logic.util.createUniqueId();
   resident.deleted = false;
