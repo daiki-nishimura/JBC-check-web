@@ -45,6 +45,12 @@ router.post('/', (req, res) => {
 
   res.status(201);
   res.json(resident);
+
+  // res.status(400);
+  // res.json({
+  //   message: ['名前を入力して下さい', '住所を入力して下さい', '性別を入力して下さい'],
+  //   resident,
+  // });
 });
 
 router.put('/:residentId', (req, res) => {
@@ -76,6 +82,16 @@ router.put('/:residentId', (req, res) => {
 
   res.status(201);
   res.json(resident);
+
+  // res.status(400);
+  // res.json({
+  //   message: [
+  //     '身長は半角数字で入力して下さい',
+  //     '体重は半角数字で入力して下さい',
+  //     '生年月日は半角数字で入力して下さい',
+  //   ],
+  //   resident,
+  // });
 });
 
 router.delete('/:residentId', (req, res) => {
@@ -83,6 +99,11 @@ router.delete('/:residentId', (req, res) => {
   logic.resident.destory(residentId);
 
   res.sendStatus(204);
+
+  // res.status(400);
+  // res.json({
+  //   message: ['利用者を選択して下さい'],
+  // });
 });
 
 module.exports = router;
