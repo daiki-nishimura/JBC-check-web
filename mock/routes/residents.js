@@ -48,7 +48,17 @@ router.post('/', (req, res) => {
 
   // res.status(400);
   // res.json({
-  //   message: ['名前を入力して下さい', '住所を入力して下さい', '性別を入力して下さい'],
+  //   message: '名前を入力して下さい',
+  //   resident,
+  // });
+  // res.status(400);
+  // res.json({
+  //   message: '住所を入力して下さい',
+  //   resident,
+  // });
+  // res.status(400);
+  // res.json({
+  //   message: '性別を入力して下さい',
   //   resident,
   // });
 });
@@ -85,11 +95,17 @@ router.put('/:residentId', (req, res) => {
 
   // res.status(400);
   // res.json({
-  //   message: [
-  //     '身長は半角数字で入力して下さい',
-  //     '体重は半角数字で入力して下さい',
-  //     '生年月日は半角数字で入力して下さい',
-  //   ],
+  //   message: '名前を入力して下さい',
+  //   resident,
+  // });
+  // res.status(400);
+  // res.json({
+  //   message: '住所を入力して下さい',
+  //   resident,
+  // });
+  // res.status(400);
+  // res.json({
+  //   message: '性別を入力して下さい',
   //   resident,
   // });
 });
