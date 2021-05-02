@@ -1,6 +1,16 @@
 <template>
   <div>
     <v-text-field v-model="name" label="利用者名"></v-text-field>
+    <!-- ここにエラーメッセージを表示 -->
+    <!-- <div v-if="hasErrorWithName">
+      <p>
+        <span>!</span>
+        <span></span>
+      </p>
+    </div> -->
+
+    <!-- errors.get('name')でエラーメッセージが取れるので、それを表示に使う -->
+    <!-- errors.get('name'); -->
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
 
@@ -23,7 +33,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
@@ -39,6 +49,7 @@ export default {
 
   computed: {
     ...mapState('residentEditor', ['editingData']),
+    ...mapGetters('residentEditor', ['errors']),
 
     /**
      * 利用者名
@@ -158,6 +169,14 @@ export default {
       set(remarks) {
         this.setRemarks({ remarks });
       },
+    },
+
+    /**
+     * 名前にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithName() {
+      return this.errors.has('name');
     },
   },
 
