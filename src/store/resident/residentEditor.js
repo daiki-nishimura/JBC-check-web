@@ -1,3 +1,5 @@
+import Validator from '@/utils/validator';
+
 export const state = {
   editingData: {
     /**
@@ -49,6 +51,50 @@ export const state = {
      * 備考
      */
     remarks: null,
+  },
+};
+
+export const getters = {
+  /**
+   * 入力検証
+   * @param  editingData
+   * @returns {function(*): Validator}
+   */
+  validation({ editingData }) {
+    const rules = {
+      name: 'required',
+    };
+
+    const attributeNames = {
+      name: '名前',
+    };
+
+    const validation = new Validator(editingData, rules);
+    validation.setAttributeNames(attributeNames);
+
+    validation.check();
+
+    return validation;
+  },
+
+  /**
+   * エラーコレクション
+   * @param  state
+   * @param  validation
+   * @returns {*}
+   */
+  errors(state, { validation }) {
+    return validation.errors;
+  },
+
+  /**
+   * エラーがあるか
+   * @param  state
+   * @param  validation
+   * @returns {boolean}
+   */
+  hasErrors(state, { validation }) {
+    return validation.errorCount > 0;
   },
 };
 
@@ -239,6 +285,7 @@ export const actions = {
 export default {
   namespaced: true,
   state,
+  getters,
   mutations,
   actions,
 };
