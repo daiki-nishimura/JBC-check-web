@@ -115,11 +115,6 @@ router.delete('/:residentId', (req, res) => {
   logic.resident.destory(residentId);
 
   res.sendStatus(204);
-
-  // res.status(400);
-  // res.json({
-  //   message: ['利用者を選択して下さい'],
-  // });
 });
 
 module.exports = router;
