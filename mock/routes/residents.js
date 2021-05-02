@@ -48,11 +48,6 @@ router.post('/', (req, res) => {
 
   // res.status(400);
   // res.json({
-  //   message: '名前を入力して下さい',
-  //   resident,
-  // });
-  // res.status(400);
-  // res.json({
   //   message: '住所を入力して下さい',
   //   resident,
   // });
