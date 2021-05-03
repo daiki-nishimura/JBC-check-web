@@ -131,6 +131,7 @@ router.put('/:residentId', (req, res) => {
   //     },
   //   ],
   // });
+
   // res.status(400);
   // res.json({
   //   message: '性別を入力して下さい',
