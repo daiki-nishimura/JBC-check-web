@@ -56,6 +56,7 @@ router.post('/', (req, res) => {
   //     },
   //   ],
   // });
+
   // res.status(400);
   // res.json({
   //   message: '住所を入力して下さい',
@@ -66,6 +67,7 @@ router.post('/', (req, res) => {
   //     },
   //   ],
   // });
+
   // res.status(400);
   // res.json({
   //   message: '性別を入力して下さい',
