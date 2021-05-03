@@ -120,6 +120,7 @@ router.put('/:residentId', (req, res) => {
   //     },
   //   ],
   // });
+
   // res.status(400);
   // res.json({
   //   message: '住所を入力して下さい',
