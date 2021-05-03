@@ -52,7 +52,7 @@ router.post('/', (req, res) => {
   //   errors: [
   //     {
   //       field: 'name',
-  //       code: '100',
+  //       code: 'E100',
   //     },
   //   ],
   // });
@@ -63,7 +63,7 @@ router.post('/', (req, res) => {
   //   errors: [
   //     {
   //       field: 'address',
-  //       code: '101',
+  //       code: 'E101',
   //     },
   //   ],
   // });
@@ -74,7 +74,7 @@ router.post('/', (req, res) => {
   //   errors: [
   //     {
   //       field: 'gender',
-  //       code: '102',
+  //       code: 'E102',
   //     },
   //   ],
   // });
@@ -116,7 +116,7 @@ router.put('/:residentId', (req, res) => {
   //   errors: [
   //     {
   //       field: 'name',
-  //       code: '100',
+  //       code: 'E100',
   //     },
   //   ],
   // });
@@ -127,7 +127,7 @@ router.put('/:residentId', (req, res) => {
   //   errors: [
   //     {
   //       field: 'address',
-  //       code: '101',
+  //       code: 'E101',
   //     },
   //   ],
   // });
@@ -138,7 +138,7 @@ router.put('/:residentId', (req, res) => {
   //   errors: [
   //     {
   //       field: 'gender',
-  //       code: '102',
+  //       code: 'E102',
   //     },
   //   ],
   // });
