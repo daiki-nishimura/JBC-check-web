@@ -45,6 +45,39 @@ router.post('/', (req, res) => {
 
   res.status(201);
   res.json(resident);
+
+  // res.status(400);
+  // res.json({
+  //   message: '名前を入力して下さい',
+  //   errors: [
+  //     {
+  //       field: 'name',
+  //       code: 'E100',
+  //     },
+  //   ],
+  // });
+
+  // res.status(400);
+  // res.json({
+  //   message: '住所を入力して下さい',
+  //   errors: [
+  //     {
+  //       field: 'address',
+  //       code: 'E101',
+  //     },
+  //   ],
+  // });
+
+  // res.status(400);
+  // res.json({
+  //   message: '性別を入力して下さい',
+  //   errors: [
+  //     {
+  //       field: 'gender',
+  //       code: 'E102',
+  //     },
+  //   ],
+  // });
 });
 
 router.put('/:residentId', (req, res) => {
@@ -76,6 +109,39 @@ router.put('/:residentId', (req, res) => {
 
   res.status(201);
   res.json(resident);
+
+  // res.status(400);
+  // res.json({
+  //   message: '名前を入力して下さい',
+  //   errors: [
+  //     {
+  //       field: 'name',
+  //       code: 'E100',
+  //     },
+  //   ],
+  // });
+
+  // res.status(400);
+  // res.json({
+  //   message: '住所を入力して下さい',
+  //   errors: [
+  //     {
+  //       field: 'address',
+  //       code: 'E101',
+  //     },
+  //   ],
+  // });
+
+  // res.status(400);
+  // res.json({
+  //   message: '性別を入力して下さい',
+  //   errors: [
+  //     {
+  //       field: 'gender',
+  //       code: 'E102',
+  //     },
+  //   ],
+  // });
 });
 
 router.delete('/:residentId', (req, res) => {
