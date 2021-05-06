@@ -1,16 +1,12 @@
 <template>
   <div>
     <v-text-field v-model="name" label="利用者名"></v-text-field>
-    <!-- ここにエラーメッセージを表示 -->
-    <!-- <div v-if="hasErrorWithName">
-      <p>
-        <span>!</span>
-        <span></span>
-      </p>
-    </div> -->
 
-    <!-- errors.get('name')でエラーメッセージが取れるので、それを表示に使う -->
-    <!-- errors.get('name'); -->
+    <div v-if="hasErrorWithName" class="red--text">
+      <p>
+        <span>{{ errors.first('name') }}</span>
+      </p>
+    </div>
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
 
