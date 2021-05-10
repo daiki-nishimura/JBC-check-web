@@ -71,6 +71,10 @@ export const getters = {
 
     const attributeNames = {
       name: '名前',
+      birthday: '生年月日',
+      gender: '性別',
+      height: '身長',
+      weight: '体重',
     };
 
     const validation = new Validator(editingData, rules);
