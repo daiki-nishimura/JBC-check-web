@@ -4,17 +4,40 @@
 
     <div v-if="hasErrorWithName" class="red--text">
       <p>
-        <span>{{ errors.first('name') }}</span>
+        <span v-for="n in errors.get('name')" :key="n">{{ n }}</span>
       </p>
     </div>
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
+    <div v-if="hasErrorWithBirthday" class="red--text">
+      <p>
+        <span v-for="b in errors.get('birthday')" :key="b">{{ b }}</span>
+      </p>
+    </div>
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
 
+    <div v-if="hasErrorWithGender" class="red--text">
+      <p>
+        <span v-for="g in errors.get('gender')" :key="g">{{ g }}</span>
+      </p>
+    </div>
+
     <v-text-field v-model="height" label="身長"></v-text-field>
 
+    <div v-if="hasErrorWithHeight" class="red--text">
+      <p>
+        <span v-for="h in errors.get('height')" :key="h">{{ h }}</span>
+      </p>
+    </div>
+
     <v-text-field v-model="weight" label="体重"></v-text-field>
+
+    <div v-if="hasErrorWithWeight" class="red--text">
+      <p>
+        <span v-for="w in errors.get('weight')" :key="w">{{ w }}</span>
+      </p>
+    </div>
 
     <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
@@ -159,6 +182,38 @@ export default {
      */
     hasErrorWithName() {
       return this.errors.has('name');
+    },
+
+    /**
+     * 生年月日にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithBirthday() {
+      return this.errors.has('birthday');
+    },
+
+    /**
+     * 性別にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithGender() {
+      return this.errors.has('gender');
+    },
+
+    /**
+     * 身長にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithHeight() {
+      return this.errors.has('height');
+    },
+
+    /**
+     * 体重にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithWeight() {
+      return this.errors.has('weight');
     },
   },
   methods: {
