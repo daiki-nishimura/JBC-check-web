@@ -62,7 +62,11 @@ export const getters = {
    */
   validation({ editingData }) {
     const rules = {
-      name: 'required',
+      name: 'required|max:10',
+      birthday: 'regex: ^[0-9]+$ ',
+      gender: 'required',
+      height: 'regex: ^[0-9]+$ ',
+      weight: 'regex: ^[0-9]+$ ',
     };
 
     const attributeNames = {
