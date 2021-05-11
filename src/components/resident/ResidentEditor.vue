@@ -53,8 +53,10 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
+
 export default {
   name: `ResidentEditor`,
+
   data() {
     return {
       /**
@@ -63,9 +65,11 @@ export default {
       genderItems: ['男', '女'],
     };
   },
+
   computed: {
     ...mapState('residentEditor', ['editingData']),
     ...mapGetters('residentEditor', ['errors']),
+  
     /**
      * 利用者名
      */
@@ -77,6 +81,7 @@ export default {
         this.setName({ name });
       },
     },
+
     /**
      * 生年月日
      */
@@ -88,6 +93,7 @@ export default {
         this.setBirthday({ birthday });
       },
     },
+
     /**
      * 性別
      */
@@ -99,6 +105,7 @@ export default {
         this.setGender({ gender });
       },
     },
+
     /**
      * 身長
      */
@@ -110,6 +117,7 @@ export default {
         this.setHeight({ height });
       },
     },
+
     /**
      * 体重
      */
@@ -121,6 +129,7 @@ export default {
         this.setWeight({ weight });
       },
     },
+
     /**
      * アレルギー
      */
@@ -132,6 +141,7 @@ export default {
         this.setAllergies({ allergies });
       },
     },
+
     /**
      * 病歴
      */
@@ -143,6 +153,7 @@ export default {
         this.setMedicalHistory({ medicalHistory });
       },
     },
+
     /**
      * 趣味嗜好
      */
@@ -154,6 +165,7 @@ export default {
         this.setPreference({ preference });
       },
     },
+
     /**
      * 生活歴
      */
@@ -165,6 +177,7 @@ export default {
         this.setLifeHistory({ lifeHistory });
       },
     },
+
     /**
      * 備考
      */
@@ -176,6 +189,7 @@ export default {
         this.setRemarks({ remarks });
       },
     },
+
     /**
      * 名前にエラーがあるか
      * @returns {boolean}
@@ -216,6 +230,7 @@ export default {
       return this.errors.has('weight');
     },
   },
+
   methods: {
     ...mapActions('residentEditor', [
       'setName',
