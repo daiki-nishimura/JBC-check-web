@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ErrorMessage />
+    <ErrorMessages />
 
     <v-text-field v-model="name" label="利用者名"></v-text-field>
 
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import ErrorMessage from '@/components/common/ErrorMessage.vue';
+import ErrorMessages from '@/components/common/ErrorMessages.vue';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
 
   components: {
-    ErrorMessage,
+    ErrorMessages,
   },
 
   data() {
