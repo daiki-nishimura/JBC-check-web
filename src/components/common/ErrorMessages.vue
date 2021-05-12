@@ -18,7 +18,7 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  name: `ErrorMassege`,
+  name: `ErrorMasseges`,
 
   computed: {
     ...mapGetters('residentEditor', ['errors']),
