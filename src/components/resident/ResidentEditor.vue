@@ -1,43 +1,26 @@
 <template>
   <div>
+    <ErrorMessage />
+
     <v-text-field v-model="name" label="利用者名"></v-text-field>
 
-    <div v-if="hasErrorWithName" class="red--text">
-      <p>
-        <span v-for="n in errors.get('name')" :key="n">{{ n }}</span>
-      </p>
-    </div>
+    <span v-for="n in errors.get('name')" :key="n" class="red--text">{{ n }}</span>
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
-    <div v-if="hasErrorWithBirthday" class="red--text">
-      <p>
-        <span v-for="b in errors.get('birthday')" :key="b">{{ b }}</span>
-      </p>
-    </div>
+
+    <span v-for="b in errors.get('birthday')" :key="b" class="red--text">{{ b }}</span>
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
 
-    <div v-if="hasErrorWithGender" class="red--text">
-      <p>
-        <span v-for="g in errors.get('gender')" :key="g">{{ g }}</span>
-      </p>
-    </div>
+    <span v-for="g in errors.get('gender')" :key="g" class="red--text">{{ g }}</span>
 
     <v-text-field v-model="height" label="身長"></v-text-field>
 
-    <div v-if="hasErrorWithHeight" class="red--text">
-      <p>
-        <span v-for="h in errors.get('height')" :key="h">{{ h }}</span>
-      </p>
-    </div>
+    <span v-for="h in errors.get('height')" :key="h" class="red--text">{{ h }}</span>
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
 
-    <div v-if="hasErrorWithWeight" class="red--text">
-      <p>
-        <span v-for="w in errors.get('weight')" :key="w">{{ w }}</span>
-      </p>
-    </div>
+    <span v-for="w in errors.get('weight')" :key="w" class="red--text">{{ w }}</span>
 
     <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
@@ -52,10 +35,15 @@
 </template>
 
 <script>
+import ErrorMessage from '@/components/common/ErrorMessage.vue';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
+
+  components: {
+    ErrorMessage,
+  },
 
   data() {
     return {
@@ -69,7 +57,7 @@ export default {
   computed: {
     ...mapState('residentEditor', ['editingData']),
     ...mapGetters('residentEditor', ['errors']),
-  
+
     /**
      * 利用者名
      */
@@ -188,46 +176,6 @@ export default {
       set(remarks) {
         this.setRemarks({ remarks });
       },
-    },
-
-    /**
-     * 名前にエラーがあるか
-     * @returns {boolean}
-     */
-    hasErrorWithName() {
-      return this.errors.has('name');
-    },
-
-    /**
-     * 生年月日にエラーがあるか
-     * @returns {boolean}
-     */
-    hasErrorWithBirthday() {
-      return this.errors.has('birthday');
-    },
-
-    /**
-     * 性別にエラーがあるか
-     * @returns {boolean}
-     */
-    hasErrorWithGender() {
-      return this.errors.has('gender');
-    },
-
-    /**
-     * 身長にエラーがあるか
-     * @returns {boolean}
-     */
-    hasErrorWithHeight() {
-      return this.errors.has('height');
-    },
-
-    /**
-     * 体重にエラーがあるか
-     * @returns {boolean}
-     */
-    hasErrorWithWeight() {
-      return this.errors.has('weight');
     },
   },
 
