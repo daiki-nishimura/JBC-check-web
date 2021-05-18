@@ -1,7 +1,5 @@
 <template>
   <div>
-    <ErrorMessages />
-
     <v-text-field v-model="name" label="利用者名"></v-text-field>
     <p v-if="hasErrorWithName">
       <span v-for="n in errors.get('name')" :key="n" class="red--text">{{ n }}</span>
@@ -40,13 +38,13 @@
 </template>
 
 <script>
-import ErrorMessages from '@/components/common/ErrorMessages.vue';
+// import ErrorMessages from '@/components/common/ErrorMessages.vue';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
   components: {
-    ErrorMessages,
+    // ErrorMessages,
   },
   data() {
     return {
