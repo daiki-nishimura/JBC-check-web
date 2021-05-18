@@ -1,29 +1,19 @@
 <template>
   <div>
     <v-text-field v-model="name" label="利用者名"></v-text-field>
-    <p v-if="hasErrorWithName">
-      <span v-for="n in errors.get('name')" :key="n" class="red--text">{{ n }}</span>
-    </p>
+    <ErrorMessages v-if="hasErrorWithName" :errors="errors.get('name')" />
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
-    <p v-if="hasErrorWithBirthday">
-      <span v-for="b in errors.get('birthday')" :key="b" class="red--text">{{ b }}</span>
-    </p>
+    <ErrorMessages v-if="hasErrorWithBirthday" :errors="errors.get('birthday')" />
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
-    <p v-if="hasErrorWithGender">
-      <span v-for="g in errors.get('gender')" :key="g" class="red--text">{{ g }}</span>
-    </p>
+    <ErrorMessages v-if="hasErrorWithGender" :errors="errors.get('gender')" />
 
     <v-text-field v-model="height" label="身長"></v-text-field>
-    <p v-if="hasErrorWithHeight">
-      <span v-for="h in errors.get('height')" :key="h" class="red--text">{{ h }}</span>
-    </p>
+    <ErrorMessages v-if="hasErrorWithHeight" :errors="errors.get('height')" />
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
-    <p v-if="hasErrorWithWeight">
-      <span v-for="w in errors.get('weight')" :key="w" class="red--text">{{ w }}</span>
-    </p>
+    <ErrorMessages v-if="hasErrorWithWeight" :errors="errors.get('weight')" />
 
     <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
@@ -38,14 +28,16 @@
 </template>
 
 <script>
-// import ErrorMessages from '@/components/common/ErrorMessages.vue';
+import ErrorMessages from '@/components/common/ErrorMessages.vue';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
+
   components: {
-    // ErrorMessages,
+    ErrorMessages,
   },
+
   data() {
     return {
       /**
