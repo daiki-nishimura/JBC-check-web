@@ -3,24 +3,29 @@
     <ErrorMessages />
 
     <v-text-field v-model="name" label="利用者名"></v-text-field>
-
-    <span v-for="n in errors.get('name')" :key="n" class="red--text">{{ n }}</span>
+    <p v-if="hasErrorWithName">
+      <span v-for="n in errors.get('name')" :key="n" class="red--text">{{ n }}</span>
+    </p>
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
-
-    <span v-for="b in errors.get('birthday')" :key="b" class="red--text">{{ b }}</span>
+    <p v-if="hasErrorWithBirthday">
+      <span v-for="b in errors.get('birthday')" :key="b" class="red--text">{{ b }}</span>
+    </p>
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
-
-    <span v-for="g in errors.get('gender')" :key="g" class="red--text">{{ g }}</span>
+    <p v-if="hasErrorWithGender">
+      <span v-for="g in errors.get('gender')" :key="g" class="red--text">{{ g }}</span>
+    </p>
 
     <v-text-field v-model="height" label="身長"></v-text-field>
-
-    <span v-for="h in errors.get('height')" :key="h" class="red--text">{{ h }}</span>
+    <p v-if="hasErrorWithHeight">
+      <span v-for="h in errors.get('height')" :key="h" class="red--text">{{ h }}</span>
+    </p>
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
-
-    <span v-for="w in errors.get('weight')" :key="w" class="red--text">{{ w }}</span>
+    <p v-if="hasErrorWithWeight">
+      <span v-for="w in errors.get('weight')" :key="w" class="red--text">{{ w }}</span>
+    </p>
 
     <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
@@ -40,11 +45,9 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
-
   components: {
     ErrorMessages,
   },
-
   data() {
     return {
       /**
@@ -53,11 +56,9 @@ export default {
       genderItems: ['男', '女'],
     };
   },
-
   computed: {
     ...mapState('residentEditor', ['editingData']),
     ...mapGetters('residentEditor', ['errors']),
-
     /**
      * 利用者名
      */
@@ -69,7 +70,6 @@ export default {
         this.setName({ name });
       },
     },
-
     /**
      * 生年月日
      */
@@ -81,7 +81,6 @@ export default {
         this.setBirthday({ birthday });
       },
     },
-
     /**
      * 性別
      */
@@ -93,7 +92,6 @@ export default {
         this.setGender({ gender });
       },
     },
-
     /**
      * 身長
      */
@@ -105,7 +103,6 @@ export default {
         this.setHeight({ height });
       },
     },
-
     /**
      * 体重
      */
@@ -117,7 +114,6 @@ export default {
         this.setWeight({ weight });
       },
     },
-
     /**
      * アレルギー
      */
@@ -129,7 +125,6 @@ export default {
         this.setAllergies({ allergies });
       },
     },
-
     /**
      * 病歴
      */
@@ -141,7 +136,6 @@ export default {
         this.setMedicalHistory({ medicalHistory });
       },
     },
-
     /**
      * 趣味嗜好
      */
@@ -153,7 +147,6 @@ export default {
         this.setPreference({ preference });
       },
     },
-
     /**
      * 生活歴
      */
@@ -165,7 +158,6 @@ export default {
         this.setLifeHistory({ lifeHistory });
       },
     },
-
     /**
      * 備考
      */
@@ -178,7 +170,6 @@ export default {
       },
     },
   },
-
   methods: {
     ...mapActions('residentEditor', [
       'setName',
