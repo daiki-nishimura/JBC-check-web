@@ -3,7 +3,7 @@
     <v-text-field v-model="name" label="利用者名"></v-text-field>
     <ContentEditorErrors v-if="hasErrorWithName" :errors="errors.get('name')" />
 
-    <v-text-field v-model="birthday" label="生年月日"></v-text-field>
+    <v-text-field v-model="birthday" label="生年月日" placeholder="例）2000/01/01"></v-text-field>
     <ContentEditorErrors v-if="hasErrorWithBirthday" :errors="errors.get('birthday')" />
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
