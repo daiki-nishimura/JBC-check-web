@@ -63,7 +63,7 @@ export const getters = {
   validation({ editingData }) {
     const rules = {
       name: 'required|max:10',
-      birthday: 'integer',
+      birthday: 'date|regex:/^\\d{4}/\\d{2}/\\d{2}$/',
       gender: 'required',
       height: 'integer|digits_between:2,3',
       weight: 'integer|digits_between:2,3',
