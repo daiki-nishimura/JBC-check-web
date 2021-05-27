@@ -1,19 +1,19 @@
 <template>
   <div>
     <v-text-field v-model="name" label="利用者名"></v-text-field>
-    <ErrorMessages v-if="hasErrorWithName" :errors="errors.get('name')" />
+    <ContentEditorErrors v-if="hasErrorWithName" :errors="errors.get('name')" />
 
     <v-text-field v-model="birthday" label="生年月日"></v-text-field>
-    <ErrorMessages v-if="hasErrorWithBirthday" :errors="errors.get('birthday')" />
+    <ContentEditorErrors v-if="hasErrorWithBirthday" :errors="errors.get('birthday')" />
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
-    <ErrorMessages v-if="hasErrorWithGender" :errors="errors.get('gender')" />
+    <ContentEditorErrors v-if="hasErrorWithGender" :errors="errors.get('gender')" />
 
     <v-text-field v-model="height" label="身長"></v-text-field>
-    <ErrorMessages v-if="hasErrorWithHeight" :errors="errors.get('height')" />
+    <ContentEditorErrors v-if="hasErrorWithHeight" :errors="errors.get('height')" />
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
-    <ErrorMessages v-if="hasErrorWithWeight" :errors="errors.get('weight')" />
+    <ContentEditorErrors v-if="hasErrorWithWeight" :errors="errors.get('weight')" />
 
     <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import ErrorMessages from '@/components/common/ErrorMessages.vue';
+import ContentEditorErrors from '@/components/common/ContentEditorErrors.vue';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
 
   components: {
-    ErrorMessages,
+    ContentEditorErrors,
   },
 
   data() {
