@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: `ErrorMasseges`,
+  name: `ContentEditorErrors`,
   props: {
     errors: {
       type: Array,
