@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: `ContentEditorErrors`,
+  name: `ContentEditorErrorMessages`,
   props: {
     errors: {
       type: Array,
