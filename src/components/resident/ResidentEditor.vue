@@ -1,14 +1,19 @@
 <template>
   <div>
     <v-text-field v-model="name" label="利用者名"></v-text-field>
+    <ContentEditorErrorMessages v-if="hasErrorWithName" :errors="errors.get('name')" />
 
-    <v-text-field v-model="birthday" label="生年月日"></v-text-field>
+    <v-text-field v-model="birthday" label="生年月日" placeholder="例）2000/01/01"></v-text-field>
+    <ContentEditorErrorMessages v-if="hasErrorWithBirthday" :errors="errors.get('birthday')" />
 
     <v-select v-model="gender" :items="genderItems" label="性別"></v-select>
+    <ContentEditorErrorMessages v-if="hasErrorWithGender" :errors="errors.get('gender')" />
 
     <v-text-field v-model="height" label="身長"></v-text-field>
+    <ContentEditorErrorMessages v-if="hasErrorWithHeight" :errors="errors.get('height')" />
 
     <v-text-field v-model="weight" label="体重"></v-text-field>
+    <ContentEditorErrorMessages v-if="hasErrorWithWeight" :errors="errors.get('weight')" />
 
     <v-textarea v-model="allergies" no-resize rows="3" label="アレルギー"></v-textarea>
 
@@ -23,10 +28,15 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import ContentEditorErrorMessages from '@/components/common/ContentEditorErrorMessages.vue';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: `ResidentEditor`,
+
+  components: {
+    ContentEditorErrorMessages,
+  },
 
   data() {
     return {
@@ -39,6 +49,7 @@ export default {
 
   computed: {
     ...mapState('residentEditor', ['editingData']),
+    ...mapGetters('residentEditor', ['errors']),
 
     /**
      * 利用者名
@@ -158,6 +169,46 @@ export default {
       set(remarks) {
         this.setRemarks({ remarks });
       },
+    },
+
+    /**
+     * 名前にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithName() {
+      return this.errors.has('name');
+    },
+
+    /**
+     * 生年月日にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithBirthday() {
+      return this.errors.has('birthday');
+    },
+
+    /**
+     * 性別にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithGender() {
+      return this.errors.has('gender');
+    },
+
+    /**
+     * 身長にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithHeight() {
+      return this.errors.has('height');
+    },
+
+    /**
+     * 体重にエラーがあるか
+     * @returns {boolean}
+     */
+    hasErrorWithWeight() {
+      return this.errors.has('weight');
     },
   },
 
