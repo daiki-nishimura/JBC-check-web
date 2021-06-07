@@ -1,3 +1,5 @@
+import Validator from '@/utils/validator';
+
 export const state = {
   editingData: {
     /**
@@ -49,6 +51,58 @@ export const state = {
      * 備考
      */
     remarks: null,
+  },
+};
+
+export const getters = {
+  /**
+   * 入力検証
+   * @param  editingData
+   * @returns {function(*): Validator}
+   */
+  validation({ editingData }) {
+    const rules = {
+      name: 'required|max:10',
+      birthday: 'date|regex:/^\\d{4}/\\d{2}/\\d{2}$/',
+      gender: 'required',
+      height: 'integer|digits_between:2,3',
+      weight: 'integer|digits_between:2,3',
+    };
+
+    const attributeNames = {
+      name: '名前',
+      birthday: '生年月日',
+      gender: '性別',
+      height: '身長',
+      weight: '体重',
+    };
+
+    const validation = new Validator(editingData, rules);
+    validation.setAttributeNames(attributeNames);
+
+    validation.check();
+
+    return validation;
+  },
+
+  /**
+   * エラーコレクション
+   * @param  state
+   * @param  validation
+   * @returns {*}
+   */
+  errors(state, { validation }) {
+    return validation.errors;
+  },
+
+  /**
+   * エラーがあるか
+   * @param  state
+   * @param  validation
+   * @returns {boolean}
+   */
+  hasErrors(state, { validation }) {
+    return validation.errorCount > 0;
   },
 };
 
@@ -239,6 +293,7 @@ export const actions = {
 export default {
   namespaced: true,
   state,
+  getters,
   mutations,
   actions,
 };
