@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
     "dayjs": "^1.10.4",
     "validatorjs": "^3.22.1",
     "vue": "^2.6.11",
