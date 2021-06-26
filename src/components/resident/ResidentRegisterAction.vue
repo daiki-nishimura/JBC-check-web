@@ -28,10 +28,10 @@ export default {
      * @returns {boolean}
      */
     canRegister() {
-    return !this.hasErrors;
+    return this.hasErrors;
     },
   },
-  
+
   methods: {
     ...mapActions('residentEditor', ['registerResident']),
     
