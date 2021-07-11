@@ -289,25 +289,51 @@ export const actions = {
   setRemarks({ commit }, { remarks }) {
     commit('remarks', { remarks });
   },
-  
 
-    /**
-     * 利用者を登録する
-     * @param {string} name
-     * @param {string} birthday
-     * @param {string} gender
-     * @param {Number} height
-     * @param {Number} weight
-     * @param {string} allergies
-     * @param {string} medicalHistory
-     * @param {string} preference
-     * @param {string} lifeHistory
-     * @param {string} remarks
-     * @returns {Promise<void>}
-     */
-  
-    async registerResident({ commit }) {
-      const {
+  /**
+   * 利用者を登録する
+   * @param {string} name
+   * @param {string} birthday
+   * @param {string} gender
+   * @param {Number} height
+   * @param {Number} weight
+   * @param {string} allergies
+   * @param {string} medicalHistory
+   * @param {string} preference
+   * @param {string} lifeHistory
+   * @param {string} remarks
+   * @returns {Promise<void>}
+   */
+
+  async registerResident({ commit }) {
+    const {
+      name,
+      birthday,
+      gender,
+      height,
+      weight,
+      allergies,
+      medicalHistory,
+      preference,
+      lifeHistory,
+      remarks,
+    } = state.editingData;
+
+    const data = {
+      name,
+      birthday,
+      gender,
+      height,
+      weight,
+      allergies,
+      medicalHistory,
+      preference,
+      lifeHistory,
+      remarks,
+    };
+
+    await axios
+      .post('residents', {
         name,
         birthday,
         gender,
@@ -318,49 +344,25 @@ export const actions = {
         preference,
         lifeHistory,
         remarks,
-      } = state.editingData;
-  
-      const data = {
-        name,
-        birthday,
-        gender,
-        height,
-        weight,
-        allergies,
-        medicalHistory,
-        preference,
-        lifeHistory,
-        remarks,
-      };
-  
-      await axios.post('residents',{
-        name,
-        birthday,
-        gender,
-        height,
-        weight,
-        allergies,
-        medicalHistory,
-        preference,
-        lifeHistory,
-        remarks,})
-      .then(response => {
+      })
+      .then((response) => {
         commit(
-        'name',
-        'birthday',
-        'gender',
-        'height',
-        'weight',
-        'allergies',
-        'medicalHistory',
-        'preference',
-        'lifeHistory',
-        'remarks',
-        response.data);
-        })
-        console.log(data);
-    },
-  }
+          'name',
+          'birthday',
+          'gender',
+          'height',
+          'weight',
+          'allergies',
+          'medicalHistory',
+          'preference',
+          'lifeHistory',
+          'remarks',
+          response.data
+        );
+      });
+    console.log(data);
+  },
+};
 
 export default {
   namespaced: true,
