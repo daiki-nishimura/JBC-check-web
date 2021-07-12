@@ -304,7 +304,6 @@ export const actions = {
    * @param {string} remarks
    * @returns {Promise<void>}
    */
-
   async registerResident({ commit }) {
     const {
       name,
