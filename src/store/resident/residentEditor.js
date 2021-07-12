@@ -356,10 +356,10 @@ export const actions = {
           'preference',
           'lifeHistory',
           'remarks',
+          data,
           response.data
         );
       });
-    console.log(data);
   },
 };
 
