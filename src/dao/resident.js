@@ -40,7 +40,6 @@ export default {
       remarks,
     };
     const response = await request.post(`residents`, data).catch((error) => {
-      // ここにエラーの処理を記述する
       throw error;
     });
 
