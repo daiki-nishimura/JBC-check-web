@@ -1,5 +1,5 @@
 import Validator from '@/utils/validator';
-import axios from '@/utils/request';
+import dao from '@/dao';
 
 export const state = {
   editingData: {
@@ -292,19 +292,10 @@ export const actions = {
 
   /**
    * 利用者を登録する
-   * @param {string} name
-   * @param {string} birthday
-   * @param {string} gender
-   * @param {Number} height
-   * @param {Number} weight
-   * @param {string} allergies
-   * @param {string} medicalHistory
-   * @param {string} preference
-   * @param {string} lifeHistory
-   * @param {string} remarks
+   * @param {string} state
    * @returns {Promise<void>}
    */
-  async registerResident({ commit }) {
+  async registerResident({ state }) {
     const {
       name,
       birthday,
@@ -331,35 +322,7 @@ export const actions = {
       remarks,
     };
 
-    await axios
-      .post('residents', {
-        name,
-        birthday,
-        gender,
-        height,
-        weight,
-        allergies,
-        medicalHistory,
-        preference,
-        lifeHistory,
-        remarks,
-      })
-      .then((response) => {
-        commit(
-          'name',
-          'birthday',
-          'gender',
-          'height',
-          'weight',
-          'allergies',
-          'medicalHistory',
-          'preference',
-          'lifeHistory',
-          'remarks',
-          data,
-          response.data
-        );
-      });
+    await dao.resident.registerResident(data);
   },
 };
 
