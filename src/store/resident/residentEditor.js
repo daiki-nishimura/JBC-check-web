@@ -1,4 +1,5 @@
 import Validator from '@/utils/validator';
+import dao from '@/dao';
 
 export const state = {
   editingData: {
@@ -287,6 +288,41 @@ export const actions = {
    */
   setRemarks({ commit }, { remarks }) {
     commit('remarks', { remarks });
+  },
+
+  /**
+   * 利用者を登録する
+   * @param {string} state
+   * @returns {Promise<void>}
+   */
+  async registerResident({ state }) {
+    const {
+      name,
+      birthday,
+      gender,
+      height,
+      weight,
+      allergies,
+      medicalHistory,
+      preference,
+      lifeHistory,
+      remarks,
+    } = state.editingData;
+
+    const data = {
+      name,
+      birthday,
+      gender,
+      height,
+      weight,
+      allergies,
+      medicalHistory,
+      preference,
+      lifeHistory,
+      remarks,
+    };
+
+    await dao.resident.registerResident(data);
   },
 };
 
